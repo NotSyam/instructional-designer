@@ -1,0 +1,17 @@
+# Exclude testing suites and pressure tests
+tests/
+pressure-tests/
+
+# Exclude standalone plain-text prompt for Gemini Gem
+references/system-prompt-plain.txt
+
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,28 @@
+{
+  "name": "instructional-designer",
+  "version": "3.1.0",
+  "description": "Expert Instructional Designer & L&D Consultant skill. Designs outcome-driven learning experiences grounded in Bloom's, ADDIE, Kirkpatrick, ARCS, and Cognitive Load Theory.",
+  "skills": "./",
+  "entry": "SKILL.md",
+  "author": "Fariz",
+  "license": "MIT",
+  "category": "education",
+  "tags": [
+    "instructional-design",
+    "L&D",
+    "curriculum",
+    "assessment",
+    "e-learning",
+    "IDD",
+    "instructional-design-document",
+    "WBS",
+    "RACI",
+    "ATD"
+  ],
+  "compatibility": {
+    "claude": true,
+    "codex": true,
+    "hermes": true,
+    "antigravity": true
+  }
+}
