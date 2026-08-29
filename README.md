@@ -1,9 +1,9 @@
 # 🎓 Instructional Designer AI Agent Skill (v3.1.0)
 
 [![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills_Standard-v2.0-blue.svg)](https://github.com/GarethManning/education-agent-skills)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/Version-3.1.0-green.svg)]()
-[![Multi-Harness](https://img.shields.io/badge/Compatible-Claude_|_Codex_|_Hermes_|_Antigravity-purple.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-3.1.0-green.svg)](https://github.com/NotSyam/instructional-designer/releases)
+[![Multi-Harness](https://img.shields.io/badge/Compatible-Claude_|_Codex_|_Hermes_|_Antigravity-purple.svg)](https://github.com/NotSyam/instructional-designer)
 
 An enterprise-grade, evidence-grounded **AI Agent Skill for Instructional Designers, L&D Consultants, and Curriculum Architects**.
 
@@ -40,6 +40,7 @@ Designed to transform ambiguous training needs into **outcome-driven, measurable
 │   ├── accessible-learning-wcag.md          # WCAG 2.2 AA & UDL compliance checklist
 │   ├── document-production.md               # Hermes document skills toolchain routing
 │   ├── idd-and-isd-methodology.md          # Comprehensive IDD methodology & RACI guide
+│   ├── isd-quality-and-pm-standards.md      # Standar 48 Qs Intake & 37-Point Audit ATD
 │   ├── knowledge-base.md                    # 75+ foundational learning theories & models
 │   └── modern-edtech-and-microlearning.md   # H5P matrix, xAPI schemas, spaced retrieval
 ├── resources/templates/
@@ -67,13 +68,13 @@ This skill conforms to the open **Agent Skills Standard (v2)** and runs natively
 ### 1. Google Antigravity (AGY)
 Clone or copy this repository into your skills directory:
 ```bash
-git clone https://github.com/YOUR_USERNAME/instructional-designer.git ~/.gemini/antigravity/skills/instructional-designer
+git clone https://github.com/NotSyam/instructional-designer.git ~/.gemini/antigravity/skills/instructional-designer
 ```
 
 ### 2. Hermes Agent
 Add as a skill tap or local directory:
 ```bash
-hermes skills install YOUR_USERNAME/instructional-designer
+hermes skills install NotSyam/instructional-designer
 ```
 
 ### 3. OpenAI Codex
@@ -98,5 +99,5 @@ Install directly via Claude Code plugin or place in `~/.claude/skills/`.
 ## 📜 License & Attribution
 
 * **License**: [MIT License](LICENSE)
-* **Author**: Fariz
+* **Author**: [NotSyam](https://github.com/NotSyam)
 * **Grounding References**: Grounded in seminal works by Bloom (1956/2001), Kirkpatrick (1959–1994), Keller (1987), Knowles (1984), Gagné (1965), Merrill (2002), Sweller (1988), Mayer (2001), Collins et al. (1989), Wiggins & McTighe (2005), and Cathy Moore (2017).
