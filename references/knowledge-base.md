@@ -173,3 +173,50 @@ Curated canon of the field: learning theory foundations, design models & framewo
 - For attribution: cite as listed here; do not invent dates or titles.
 - For design work: match the request to "Consult when" lines; combine at most 2–3 frameworks per artifact and name them inline.
 - When users cite a myth (Section D), don't just contradict — show the better alternative design.
+---
+
+## 🏛️ Real World Instructional Design Framework (Cennamo & Kalk, 2019)
+
+Berdasarkan *Real World Instructional Design: An Iterative Approach to Designing Learning Experiences (2nd Edition)* karya Katherine Cennamo & Debby Kalk (Routledge, 2019), praktik instruksional di lapangan diatur oleh prinsip-prinsip operasional berikut:
+
+### 1. The Essential Triangle of Instructional Design
+* **Tiga Sudut Penyelarasan**: **Outcomes** (apa yang ingin dicapai), **Assessments** (bagaimana mengukur ketercapaian), dan **Activities** (pengalaman untuk mencapai hasil).
+* **Pusat Segitiga**: **Learners** (Pembelajar berada di titik pusat seluruh keputusan desain).
+* **Pembungkus**: **Evaluation** (Evaluasi membungkus ketiga sudut untuk memastikan keselarasan dan relevansi terus-menerus).
+* **Prinsip Masuk Fleksibel (*Non-Linear Entry*)**: Perancang tidak wajib mulai dari objektif! Perancang dapat mulai dari:
+  * *Assessment-First*: Sangat efektif saat bekerja dengan SME lapangan yang kesulitan menyusun objektif teoritis tapi paham betul seperti apa tes/standar kelayakan kerja.
+  * *Activity/Content-First*: Saat klien sudah memiliki materi/studi kasus yang kaya dan ingin menstrukturkannya ke dalam kurikulum.
+  * *Outcomes-First*: Pendekatan klasik saat kesenjangan kinerja terdefinisi jelas.
+  * **Kunci Utama**: Dari mana pun masuknya, ketiga sudut segitiga wajib berada dalam kondisi selaras (*aligned*).
+
+### 2. The 5-Phase Knowledge-Building Spiral
+Bukan proses linier kaku "waterfall", melainkan gerakan spiral dari dalam ke luar:
+1. **Define Phase**: Menentukan kebutuhan instruksional, profil awal pembelajar, proposal proyek, asumsi risiko, dan klausul Out-of-Scope (OOS).
+2. **Design Phase**: Menyusun dokumen desain (*Design Document*), peta alur (*Flowchart*), dan dokumen materi (*Content Document*) sebelum menyentuh produksi media.
+3. **Demonstrate Phase**: Membangun prototipe konseptual (*Treatment*, skenario naratif, template layar) dan prototipe kerja (*working prototype / slice*) untuk diuji coba ke pembelajar (*learner tryout*).
+4. **Develop Phase**: Produksi penuh seluruh aset media, panduan fasilitator/peserta, dan jaminan mutu (QA).
+5. **Deliver Phase**: Peluncuran, pelatihan klien/trainer, debriefing *postmortem*, kalkulasi indeks biaya (*instructional cost index*), dan rekomendasi Version 2 (V2).
+
+### 3. The Collaborative ASC Cycle (Assemble, Synthesize, Check)
+Setiap fase digerakkan oleh siklus kolaboratif 3 langkah:
+* **Assemble & Ask**: Mengumpulkan informasi dari klien, mewawancarai SME, meneliti dokumen sumber.
+* **Synthesize & Solve**: Mengolah informasi ke dalam solusi tentatif (outline, flowchart, treatment, storyboard).
+* **Confirm & Check**: Memverifikasi pemahaman dengan stakeholder, menguji coba dengan pembelajar, merevisi berdasarkan umpan balik.
+
+### 4. Zahorik's 4 Instructional Sequencing Models (1995)
+Memilih sekuens pembelajaran berdasarkan keteraturan (Hierarki Langsung vs Berpusat Masalah) dan sifat hasil (Konvergen vs Divergen):
+1. **Application Model** (Hierarki Langsung + Konvergen): Sederhana ke kompleks menuju jawaban/prosedur baku yang telah ditentukan (Aktifkan pengetahuan awal -> Peroleh skill -> Latihan terbimbing -> Refleksi).
+2. **Discovery Model** (Berpusat Masalah + Konvergen): Memecahkan masalah terbimbing menuju prinsip baku tertentu (Eksperimen variabel lift/hambatan -> Menemukan hukum fisika -> Refleksi).
+3. **Extension Model** (Hierarki Langsung + Divergen): Menguasai keterampilan hierarkis untuk menghasilkan karya orisinal/terbuka (Menguasai struktur paragraf -> Menulis esai persuasif orisinal).
+4. **Invention Model** (Berpusat Masalah + Divergen): Pembelajar diceburkan ke dalam masalah kompleks terbuka dengan banyak alternatif solusi (Tantangan rancang bangun prototipe -> Coaching fasilitator -> Refleksi).
+
+### 5. Analisis Pembelajar: Contrived vs. Derived
+* **Contrived Analysis**: Analisis dugaan terbaik berbasis pengalaman tim pengembang, curah pendapat dengan klien, dan kajian literatur ketika akses langsung ke pembelajar terbatas.
+* **Derived Analysis**: Analisis berbasis data empiris yang diperoleh langsung dari perwakilan pembelajar melalui wawancara, kuesioner, observasi langsung, atau *focus group*.
+
+### 6. Tabel Revisi Formatif (*Revision Table*)
+Evaluasi formatif (One-on-One, Pilot Test, Field Trial) dirangkum dalam tabel tindakan yang dapat diaudit:
+* **Komponen**: Layar / Unit / Modul yang dievaluasi.
+* **Masalah**: Kesulitan atau kesalahpahaman yang dialami pembelajar.
+* **Bukti & Sumber**: Kutipan umpan balik, data salah jawab kuis, observasi fasilitator.
+* **Rencana Perubahan**: Tindakan perbaikan konkret (in-scope vs out-of-scope).

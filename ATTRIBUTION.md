@@ -49,3 +49,7 @@ The templates, scripts, and Markdown artifacts provided in this repository are *
 * They do **not** reproduce proprietary training materials, commercial courseware, or copyrighted text verbatim.
 * Reference to specific third-party frameworks, models, or publications does **not** imply endorsement, sponsorship, or official affiliation by the respective authors or copyright holders.
 * Users deploying these templates in commercial client engagements are encouraged to purchase and consult the primary source literature cited above for full theoretical depth.
+8. **Real World Instructional Design & The Essential Triangle**:
+   * **Authors**: Dr. Katherine Cennamo & Debby Kalk
+   * **Publisher**: Routledge / Taylor & Francis
+   * **Attribution**: The Essential Triangle of Instructional Design (Learners at center, Outcomes, Activities, Assessments, Evaluation wrap), the 5-phase knowledge-building spiral (Define, Design, Demonstrate, Develop, Deliver), the collaborative ASC cycle, and Zahorik's 4 sequencing models are adapted from *Real World Instructional Design: An Iterative Approach to Designing Learning Experiences* (Cennamo & Kalk, 2019).

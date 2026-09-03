@@ -122,3 +122,21 @@ Setiap proyek dinilai pada 5 dimensi (skala 1–5):
 2. **Detail Kontekstual & `[ASUMSI]`**: Skala WBS dan timeline disesuaikan dengan durasi proyek riil; tandai asumsi yang belum dikonfirmasi stakeholder.
 3. **Project-Specific Definition of Done (DoD)**: Kriteria konkret kapan dokumen dianggap tuntas dan siap dieksekusi di lapangan.
 4. **Uji "Bisa Dipakai Besok Pagi"**: Jika dicetak pukul 08.00 pagi besok, fasilitator atau developer bisa langsung jalan tanpa kebingungan instruksional.
+---
+
+## 5. The Real-World Iterative Spiral & Production Artifacts (Cennamo & Kalk, 2019)
+
+Pelaksanaan proyek di dunia nyata mengadopsi model spiral 5-fase (**Define, Design, Demonstrate, Develop, Deliver**) dengan siklus kolaboratif **ASC (Assemble & Ask, Synthesize & Solve, Confirm & Check)**:
+
+### 5.1 Non-Linear Entry pada Segitiga Esensial
+Di dunia nyata, perancang tidak selalu bisa memulai secara berurutan dari penulisan objektif. Cennamo & Kalk menekankan bahwa perancang dapat masuk dari sudut mana pun:
+* **Assessment-First**: Jika bekerja dengan SME teknis atau pekerja lapangan yang kesulitan menyusun tujuan instruksional teoritis tetapi tahu persis standar kelulusan kerja. Mulailah dari instrumen asesmen/tes, lalu turunkan menjadi sasaran dan aktivitas.
+* **Activity / Content-First**: Jika materi sumber dan video lapangan sudah melimpah. Mulailah dari inventarisasi konten dan simulasi, lalu selaraskan dengan sasaran dan instrumen asesmen.
+* **Outcomes-First**: Jika masalah bisnis dan gap kompetensi telah terdefinisi jelas sejak awal.
+
+### 5.2 Rangkaian Dokumen Produksi Bertahap (Progressive Refinement)
+1. **Design Document**: Mendefinisikan arsitektur konseptual menyeluruh (analisis audiens, tujuan, strategi delivery, asesmen, lingkungan teknis).
+2. **Content Document**: Dokumen terpisah yang merangkum seluruh substansi materi faktual dan konseptual sebelum proses desain media dimulai.
+3. **Treatment Document**: Prototipe kreatif konseptual 2-kolom yang memetakan setiap bongkahan materi (*content chunk*) dengan ide perlakuan media (*what learners see, hear, and do*) sebelum melangkah ke storyboard.
+4. **Storyboard**: Cetak biru produksi layar-demi-layar (On-Screen Text, Voiceover, interaksi, catatan developer) yang menjadi acuan pengembang dan uji jaminan mutu (QA).
+5. **Revision Table**: Matriks evaluasi formatif yang mendokumentasikan temuan uji coba pembelajar (*learner tryouts*), bukti masalah, dan perubahan yang disepakati (in-scope vs out-of-scope).

@@ -3,10 +3,10 @@ name: instructional-designer
 description: >
   Evidence-grounded AI Agent Skill for Instructional Designers, L&D Consultants,
   and Curriculum Architects. Features an Open Modular ID Architecture (M-IDA) based on
-  AECT's Survey of Instructional Design Models (6th Edition), dynamic pedagogical theory
-  selection from 75+ learning sciences, industry-ready deliverable standards (zero placeholder
-  jargon, project DoD), and production-oriented slash commands (/storyboard, /idd, /course-plan,
-  /facilitator-guide, /workbook, /scenario, /assessment, /microlearning, /theory-match).
+  AECT's Survey of Instructional Design Models (6th Edition), real-world iterative
+  methodology from Cennamo & Kalk (2019), dynamic pedagogical theory selection from 75+
+  learning sciences, and production-oriented slash commands (/storyboard, /treatment, /idd,
+  /course-plan, /facilitator-guide, /workbook, /scenario, /assessment, /microlearning, /theory-match).
 disable-model-invocation: false
 user-invocable: true
 effort: high
@@ -20,6 +20,7 @@ language: en
 evidence_strength: strong
 evidence_sources:
   - 'Dousay, T. A., & Branch, R. M. (2022) - Survey of Instructional Design Models (6th Edition, AECT/Brill)'
+  - 'Cennamo, K., & Kalk, D. (2019) - Real World Instructional Design: An Iterative Approach (2nd Edition, Routledge)'
   - 'Sweller, J. (2011) / Kalyuga, S. (2007) - Cognitive Load Theory & Expertise Reversal Effect'
   - 'Roediger, H. L., & Karpicke, J. D. (2006) - The Power of Testing Memory: Retrieval Practice'
   - 'Dunlosky, J. et al. (2013) - Improving Students\' Learning with Effective Learning Techniques'
@@ -49,7 +50,10 @@ tags:
   - curriculum-design
   - L&D
   - storyboard
+  - treatment
   - M-IDA
+  - real-world-id
+  - Cennamo-Kalk
   - ADDIE
   - SAM
   - Dick-and-Carey
@@ -85,6 +89,7 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 | Command | Output Deliverable | Focus & Execution Standard |
 |---|---|---|
 | `/storyboard` | **E-Learning & Video Storyboard** | Screen-by-screen script with On-Screen Text (OST), Voiceover Script (VO), Visual UI Layout, Branching/Interaction Logic, and Developer Notes. Ready for Articulate/Rise/Video production. |
+| `/treatment` | **Instructional Strategy Treatment** | 2-column creative prototype linking content chunks with treatment ideas (*what learners see, hear, and do*) before full storyboarding (Cennamo & Kalk, 2019). |
 | `/idd` | **Master Instructional Design Document** | Architectural blueprint featuring M-IDA framework scoring, learner personas, curriculum matrix, Kirkpatrick L1–L4 evaluation, contextual WBS, and RACI governance. |
 | `/course-plan` | **Curriculum Blueprint & Syllabus** | Module-by-module curriculum matrix mapping Bloom's objectives, seat time, Dale's Cone activities, and assessments. |
 | `/facilitator-guide` | **Complete Facilitator / Trainer Guide** | 3-column timeline script with verbatim facilitator dialogue, minute-by-minute pacing, and transition cues (**Mode B / Ready Tomorrow Morning**). |
@@ -98,7 +103,7 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 
 ## 1. Open Modular ID Architecture (M-IDA)
 
-Instead of forcing learning projects into rigid, pre-canned hybrid packages, this skill applies the **Open Modular ID Architecture (M-IDA)** grounded in the AECT *Survey of Instructional Design Models (6th Edition)* by Tonia A. Dousay & Robert Maribe Branch (2022).
+Instead of forcing learning projects into rigid, pre-canned hybrid packages, this skill applies the **Open Modular ID Architecture (M-IDA)** grounded in the AECT *Survey of Instructional Design Models (6th Edition)* by Tonia A. Dousay & Robert Maribe Branch (2022) and the real-world iterative spiral by Katherine Cennamo & Debby Kalk (2019).
 
 Projects are assembled dynamically across **4 Functional Layers**:
 
@@ -107,7 +112,7 @@ Projects are assembled dynamically across **4 Functional Layers**:
 │              OPEN MODULAR INSTRUCTIONAL DESIGN ARCHITECTURE (M-IDA)     │
 ├─────────────────────────────────────────────────────────────────────────┤
 │ LAYER 1: MACRO GOVERNANCE & LIFECYCLE (The Container)                   │
-│ Pilihan: ADDIE | Agile ID (Scrum) | Gentry IPDM | Seels & Glasgow ISD 2 │
+│ Pilihan: ADDIE | Cennamo-Kalk Spiral | Agile ID | Gentry IPDM | Seels   │
 ├─────────────────────────────────────────────────────────────────────────┤
 │ LAYER 2: TASK & KNOWLEDGE ARCHITECTURE (The Structural Engine)          │
 │ Pilihan: Dick & Carey | Merrill Pebble in Pond | 4C/ID | Action Mapping │
@@ -120,7 +125,13 @@ Projects are assembled dynamically across **4 Functional Layers**:
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 1.1 Evaluasi 5 Dimensi & Ambang Batas 20 Poin
+### 1.1 The Essential Triangle of ID (Cennamo & Kalk, 2019)
+* **Pusat**: Pembelajar (*Learners*) berada di pusat seluruh pertimbangan desain.
+* **Tiga Sudut Penyelarasan**: **Outcomes**, **Activities**, dan **Assessments** saling terhubung erat.
+* **Pembungkus**: **Evaluation** melingkupi ketiga elemen dalam siklus perbaikan terus-menerus.
+* **Prinsip Masuk Non-Linier**: Perancang dapat memulai dari sudut mana pun (*Outcomes-first*, *Assessment-first* bersama praktisi lapangan, atau *Activity/Content-first* saat materi sudah ada), selama seluruh elemen diselaraskan.
+
+### 1.2 Evaluasi 5 Dimensi & Ambang Batas 20 Poin
 1. **D1 — Stakes / Risiko Kegagalan** (1: Minor, 3: Tim/Operasional, 5: Zero-tolerance/Hukum/Nyawa)
 2. **D2 — Kompleksitas Skill** (1: Recall, 3: Prosedural, 5: Kognitif kompleks & heuristik)
 3. **D3 — Tekanan Waktu / Delivery** (1: Longgar >12 wks, 3: Standar 6–12 wks, 5: Cepat <6 wks)
@@ -131,7 +142,7 @@ Projects are assembled dynamically across **4 Functional Layers**:
 * **Selisih Skor <= 20 Poin**: Rakit kombinasi dinamis melalui M-IDA (**Confidence: Medium**).
 * **User Override**: Pilihan eksplisit user selalu diutamakan, disertai catatan diagnostik trade-off.
 
-### 1.2 Pustaka 15 Model Kanonikal (Dousay & Branch, 2022)
+### 1.3 Pustaka 15 Model Kanonikal (Dousay & Branch, 2022)
 * **Classroom Models**: Kemp Model (sirkular-fleksibel), Gerlach & Ely (content-first simultan), UbD (backward design).
 * **Product Models**: Merrill Pebble in the Pond (problem-first), van Merriënboer 4C/ID (complex tasks), Tessmer & Wedman Layers-of-Necessity (scaling waktu/budget), Agile ID / SAM (iterative sprints), Cathy Moore Action Mapping (performance gap).
 * **System Models**: Dick, Carey & Carey (hierarki presisi), Seels & Glasgow ISD 2 (manajemen difusi adopsi), Gentry IPDM (fasilitas & pendukung), Branson IPISD (kontrol mutu militer), ADDIE (makro).
@@ -139,7 +150,7 @@ Projects are assembled dynamically across **4 Functional Layers**:
 
 ---
 
-## 2. Dynamic Theory Selection Engine (Knowledge Base Integration)
+## 2. Dynamic Theory Selection & Instructional Sequencing
 
 Pilih dan padukan teori dari `references/knowledge-base.md` berdasarkan **7 Domain Kebutuhan Pembelajar**:
 
@@ -150,6 +161,12 @@ Pilih dan padukan teori dari `references/knowledge-base.md` berdasarkan **7 Doma
 5. **Retensi & Kurva Lupa**: *Retrieval Practice (Roediger & Karpicke)* + *Spaced Testing (Dunlosky)* -> low-stakes checks saat sesi + booster 3, 7, dan 21 hari.
 6. **Pembelajaran Sosial & Komunitas**: *Vygotsky ZPD* + *Wenger Communities of Practice (CoP)* -> klinik konsultasi kasus antar-rekan dan coaching fasilitator.
 7. **Keberagaman Budaya & Aksesibilitas**: *Young's Culture Based Model (CBM)* + *CAST UDL (3 Pillars)* -> adaptasi representasi budaya dan multi-modalitas ekspresi.
+
+### 2.1 Zahorik's 4 Instructional Sequences (Cennamo & Kalk, 2019)
+* **Application Model** (Hierarki Langsung + Konvergen): Sederhana ke kompleks menuju prosedur terprediksi (Aktifkan pengetahuan awal -> Kuasai skill -> Latihan -> Refleksi).
+* **Discovery Model** (Berpusat Masalah + Konvergen): Aktivitas terbimbing menuju pembuktian aturan/prinsip baku.
+* **Extension Model** (Hierarki Langsung + Divergen): Keterampilan dasar terstruktur digunakan untuk menghasilkan produk orisinal/terbuka.
+* **Invention Model** (Berpusat Masalah + Divergen): Penyelaman masalah kompleks terbuka dengan banyak alternatif pemecahan kreatif.
 
 ---
 
@@ -177,8 +194,8 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
 2. Course / Training Positioning (Audiens Persona & Asumsi Eksplisit [ASUMSI: ...])
 3. Observable Learning Objectives (Bloom's Verb + Object + Criterion)
 4. Course Overview Matrix (Modul, Durasi, Sasaran, Aktivitas Dale's Cone, Asesmen)
-5. Module-Level Pedagogical Flow (Gagné 9 Events konkret menit-demi-menit, No Placeholders)
-6. Primary Deliverable Artifact [Storyboard, IDD, Facilitator Guide, Scenario, atau Rubrik]
+5. Module-Level Pedagogical Flow (Gagné 9 Events / Zahorik Sequence konkret menit-demi-menit)
+6. Primary Deliverable Artifact [Storyboard, Treatment, IDD, Facilitator Guide, Scenario, atau Rubrik]
 7. Evaluation & Transfer Plan (Kirkpatrick L1-L4 & Spaced Retrieval Booster 3-7-21 hari)
 8. Project-Specific Definition of Done (DoD Checklist)
 9. Design Quality Self-Check Table (6 Hard Gates + 6 Advisory Gates)
@@ -214,6 +231,7 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
 ## 7. Deliverable Templates (`resources/templates/`)
 
 * **Storyboard Template**: `storyboard-template.md` (Screen-by-screen layout, OST, VO script, interaction logic, dev notes).
+* **Treatment Template**: `treatment-template.md` (2-column chunk-to-media creative prototype by Cennamo & Kalk).
 * **Master IDD Template**: `instructional-design-document-template.md` (Adaptive 8-section enterprise IDD).
 * **ISD PM Plan & Timeline**: `isd-project-timeline-and-pm-plan.md` (Contextual WBS, RACI, 35-point checklist).
 * **Course Blueprint**: `course-blueprint-template.md` (Module-by-module curriculum matrix).
