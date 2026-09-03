@@ -6,8 +6,20 @@
 > **Lead Instructional Designer**: [Name / Role]  
 > **Project Sponsor / Client**: [Name / Organization]  
 > **Primary Subject Matter Expert (SME)**: [Name / Title]  
-> **Selected ID Framework**: [ADDIE / SAM / Dick & Carey / Cathy Moore Action Mapping / Backward Design (UbD) / 4C/ID]  
-> **Framework Rationale**: [Explain why this framework was chosen as the best fit for this project]
+> **Selected ID Framework**: [ADDIE Classic / SAM / Dick & Carey / Action Mapping / UbD / 4C/ID / Hybrid Pola A–D]  
+> **Selection Confidence**: [High (diff > 20 pts) / Medium (diff <= 20 pts - Hybrid Recommended)]  
+> **User Override**: [State if framework was explicitly chosen by user or auto-selected via engine]
+
+### 0. Framework Scoring Diagnostic (5 Dimensions)
+| Dimensi | Skor (1–5) | Justifikasi Kontekstual |
+|---|:---:|---|
+| **D1 — Stakes / Risiko Kegagalan** | [1–5] | [Konsekuensi jika learner gagal: safety/legal/operational] |
+| **D2 — Kompleksitas Skill** | [1–5] | [Recall fakta vs prosedur vs heuristik/kognitif kompleks] |
+| **D3 — Tekanan Waktu / Delivery** | [1–5] | [Timeline longgar >12 wks vs standar 6-12 wks vs cepat <6 wks] |
+| **D4 — Orientasi Hasil** | [1–5] | [Transfer konseptual vs tugas prosedural vs perubahan perilaku nyata] |
+| **D5 — Konteks Governance** | [1–5] | [Startup/longgar vs korporat menengah vs audit regulasi ketat] |
+
+* **Rasional Skor & Pemilihan Model**: [Jelaskan kenapa model tunggal atau kombinasi hybrid dipilih berdasarkan profil skor di atas]
 
 ---
 
@@ -182,9 +194,30 @@ All objectives follow the observable standard: **"By the end of [Module], learne
 
 ---
 
-## 8. PROJECT GOVERNANCE, RACI MATRIX, & SIGN-OFF
+## 8. PROJECT TIMELINE, GOVERNANCE, & DEFINITION OF DONE
 
-### 8.1 RACI Project Responsibility Matrix
+### 8.1 Contextual Project Timeline & Milestones (WBS)
+> *Note: Timeline wajib disesuaikan dengan skala proyek nyata (mis. sprint 2 minggu untuk workshop cepat, 4–6 minggu untuk e-learning, atau 12–16 minggu untuk kurikulum enterprise). Dilarang memaksakan jadwal 16-minggu untuk pelatihan berskala kecil. Rincian yang belum dipastikan stakeholder wajib ditandai `[ASUMSI: ...]`.
+
+| Fase / Milestone | Durasi Estimasi | Target Tanggal | Output Deliverable Kunci | PIC |
+|---|:---:|:---:|---|:---:|
+| **Fase 1: Needs Analysis & IDD Sign-off** | [e.g., 1-2 minggu] | [YYYY-MM-DD] | Final IDD & Sasaran Disetujui | Lead ISD |
+| **Fase 2: Prototype / Storyboard Build** | [e.g., 2-3 minggu] | [YYYY-MM-DD] | Storyboard / Functional Prototype | Developer / ISD |
+| **Fase 3: SME & Stakeholder Review** | [e.g., 3-5 hari kerja] | [YYYY-MM-DD] | Feedback Log & Revisions | SME / Sponsor |
+| **Fase 4: Final Production & LMS Deploy** | [e.g., 1-2 minggu] | [YYYY-MM-DD] | SCORM / Video / Facilitator Guide | LMS Admin |
+| **Fase 5: Evaluation & Retrospective** | [e.g., 30 hari pasca] | [YYYY-MM-DD] | Kirkpatrick L1-L3 Report | Lead ISD |
+
+### 8.2 Project-Specific Definition of Done (DoD)
+Dokumen dan paket pelatihan ini dianggap tuntas dan siap dieksekusi di lapangan jika memenuhi kriteria berikut:
+- [ ] **Sponsor Approval**: Sasaran kinerja dan metrik bisnis (Kirkpatrick L3/L4) disetujui tertulis oleh Sponsor.
+- [ ] **SME Accuracy Sign-Off**: Seluruh konten teknis, terminologi, dan konsekuensi skenario divalidasi oleh SME.
+- [ ] **Zero Placeholder Jargon**: Panduan fasilitator dilengkapi skrip menit-demi-menit yang siap dibacakan langsung (Uji "Bisa Dipakai Besok Pagi" lolos).
+- [ ] **Accessibility & Tech Validation**: Lolos verifikasi kontras WCAG 2.2 AA dan uji paket LMS (SCORM/xAPI).
+- [ ] **Assessment & Rubrics Ready**: Instrumen kuis/rubrik evaluasi selesai dengan kunci jawaban dan panduan penskoran.
+
+### 8.3 RACI Project Responsibility Matrix
+
+<!-- RACI Table Below -->
 * **R** = Responsible (Does the work) | **A** = Accountable (Final sign-off) | **C** = Consulted (Provides input) | **I** = Informed (Kept updated)
 
 | Project Phase / Milestone | Project Sponsor | Lead ISD | SME | Graphic/Dev | LMS Admin |
