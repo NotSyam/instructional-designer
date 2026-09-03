@@ -1,7 +1,7 @@
 {
   "name": "instructional-designer",
-  "version": "3.1.0",
-  "description": "Expert Instructional Designer & L&D Consultant skill. Designs outcome-driven learning experiences grounded in Bloom's, ADDIE, Kirkpatrick, ARCS, and Cognitive Load Theory.",
+  "version": "3.2.0",
+  "description": "Evidence-grounded AI Agent Skill for Instructional Designers & L&D Consultants. Features weighted framework scoring, hybrid architectures, modern learning sciences, and LMS automation.",
   "skills": "./",
   "entry": "SKILL.md",
   "author": "Fariz",

@@ -313,3 +313,25 @@ pip install openpyxl
 3. **Word**: `docx_template.py org_template.docx values.json output.docx --strict`
 4. **PowerPoint**: `pptx_from_template.py brand.pptx out.pptx --values vals.json`
 5. **PDF**: `pdf_create.py` for certificates or `pdf_fill_form.py` for evaluation forms.
+
+---
+
+## Graceful Degradation & Fallback Protocols (When External Skills Are Unavailable)
+
+The instructional-designer skill functions autonomously across any environment. When external document skills (hermes/docx, hermes/powerpoint, hermes/xlsx, hermes/pdf, hermes/ocr-and-documents) are **not** installed in your agent harness, follow this 3-tier fallback protocol:
+
+### Tier 1: Hermes Core Tools (Default when installed)
+* Use the registered MCP tools or skill actions directly as specified in the routing table above.
+
+### Tier 2: Standalone Local Python Scripts (Fallback when Hermes is absent)
+* If the user requests a physical .docx, .xlsx, or .pdf file, generate a standalone Python script using standard libraries:
+  * Word: generate a script utilizing python-docx
+  * Excel: generate a script utilizing openpyxl
+  * PDF: generate a script utilizing reportlab
+* Execute the script via terminal or provide it directly to the user to run locally.
+
+### Tier 3: Universal Clean Markdown / CSV (Zero-Tooling Fallback)
+* If no Python execution environment is available:
+  * Deliverables are formatted in semantic, copy-paste-ready GitHub-flavored Markdown.
+  * Tabular data (assessment rubrics, quiz question banks, WBS timelines) is provided as clean Markdown tables and raw CSV blocks that can be pasted directly into Microsoft Excel or Google Sheets without formatting loss.
+  * Slide decks are formatted in valid Marp Markdown ready for export in VS Code or web tools.

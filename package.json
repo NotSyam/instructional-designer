@@ -1,8 +1,8 @@
 {
   "name": "instructional-designer",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "displayName": "Instructional Designer & L&D Consultant",
-  "description": "Expert Instructional Designer and L&D consultant. Designs outcome-driven learning experiences grounded in Bloom's, ADDIE, Kirkpatrick, ARCS, Gagn\u00e9, Merrill, Cognitive Load Theory, and UDL. Produces master Instructional Design Documents (IDDs), ISD Project Management Plans (WBS/RACI), course blueprints, facilitator guides, branching scenarios, assessments, rubrics, and LMS-ready quiz exports.",
+  "description": "Evidence-grounded AI Agent Skill for Instructional Designers and L&D Consultants. Features weighted framework scoring, hybrid architectures, modern learning sciences, and LMS automation.",
   "author": "NotSyam",
   "license": "MIT",
   "language": "en",

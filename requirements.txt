@@ -1,0 +1,9 @@
+# Core Python dependencies for instructional-designer automation
+# Most features run on Python standard library (re, json, xml, zipfile, pathlib)
+
+# Testing & Quality
+pytest>=7.0.0
+
+# Optional Office & Document Production Tools
+python-docx>=1.1.0
+openpyxl>=3.1.0
