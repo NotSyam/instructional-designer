@@ -1,6 +1,7 @@
 # Instructional Design Document (IDD) & ISD Methodology Reference
 
-> **Version**: 3.2.0 | **Domain**: Curriculum Architecture, L&D Enterprise Documentation, & Project Governance
+> **Version**: 3.2.0 | **Domain**: Curriculum Architecture, L&D Enterprise Documentation, & Project Governance  
+> **Theoretical Foundation**: Grounded in *Survey of Instructional Design Models (6th Edition)* by Tonia A. Dousay & Robert Maribe Branch (Brill / AECT, 2022).
 
 ---
 
@@ -13,11 +14,11 @@ An **Instructional Design Document (IDD)** serves as the master architectural co
 |                        HIERARKI DOKUMENTASI INSTRUCTIONAL DESIGN                       |
 +----------------------------------------------------------------------------------------+
 | 1. Needs Analysis Report   -> Diagnosis: kesenjangan performa, akar masalah, audiens   |
-| 2. INSTRUCTIONAL DESIGN    -> ARSITEKTUR MAKRO: Kontrak strategi, scoring framework,   |
+| 2. INSTRUCTIONAL DESIGN    -> ARSITEKTUR MAKRO: Kontrak strategi, scoring M-IDA,       |
 |    DOCUMENT (IDD)             LMS, WCAG, kriteria evaluasi, DoD, dan RACI sign-off     |
 | 3. ISD Project Plan (WBS)  -> MANAJEMEN PROYEK: Timeline kontekstual & review SLA      |
 | 4. Course Blueprint        -> MATRIKS KURIKULUM: Modul, objektif, aktivitas, asesmen   |
-| 5. Storyboard / Script     -> DETAIL MIKRO: Teks per layar, instruksi visual, tombol   |
+| 5. Storyboard / Script     -> DETAIL MIKRO: Teks per layar, audio VO, interaksi        |
 | 6. Facilitator/Learner Doc -> MATERI DELIVERABLE: Panduan fasilitator, buku peserta     |
 | 7. Evaluation Report       -> EVALUASI DAMPAK: Analisis data Kirkpatrick L1 - L4       |
 +----------------------------------------------------------------------------------------+
@@ -25,110 +26,99 @@ An **Instructional Design Document (IDD)** serves as the master architectural co
 
 ---
 
-## 2. Weighted Scoring Engine & Framework Selection
+## 2. Open Modular ID Architecture (M-IDA)
 
-Real-world training initiatives rarely fit into neat, mutually exclusive boxes. Proyek compliance sering membutuhkan perubahan perilaku nyata di lapangan, sementara proyek kepemimpinan sering butuh tata kelola korporat yang formal.
+Alih-alih membatasi diri pada 4 pola hybrid kaku, perancangan instruksional profesional menggunakan arsitektur modular berlapis (*4-Layer Modular Stack*) berbasis taksonomi Branch & Dousay (2022):
 
-### 2.1 Lima Dimensi Penilaian Proyek (Skala 1–5)
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│              OPEN MODULAR INSTRUCTIONAL DESIGN ARCHITECTURE (M-IDA)     │
+├─────────────────────────────────────────────────────────────────────────┤
+│ LAYER 1: MACRO GOVERNANCE & LIFECYCLE (The Container)                   │
+│ Pilihan: ADDIE | Agile ID (Scrum) | Gentry IPDM | Seels & Glasgow ISD 2 │
+├─────────────────────────────────────────────────────────────────────────┤
+│ LAYER 2: TASK & KNOWLEDGE ARCHITECTURE (The Structural Engine)          │
+│ Pilihan: Dick & Carey | Merrill Pebble in Pond | 4C/ID | Action Mapping │
+├─────────────────────────────────────────────────────────────────────────┤
+│ LAYER 3: PEDAGOGICAL & CULTURAL STRATEGY (The Delivery Experience)      │
+│ Pilihan: Gagné 9 Events | UbD (Transfer) | Young CBM (Culture) | UDL   │
+├─────────────────────────────────────────────────────────────────────────┤
+│ LAYER 4: CONSTRAINT SCALING & EVOLUTION (The Resource Adapter)          │
+│ Pilihan: Tessmer & Wedman Layers-of-Necessity (Layer 1 MVP -> Layer n)  │
+└─────────────────────────────────────────────────────────────────────────┘
+```
 
-Setiap proyek instructional design dievaluasi pada 5 dimensi berikut:
+### 2.1 Katalog 15 Model Kanonikal (Dousay & Branch, 2022)
 
-| Dimensi | Skor 1 (Rendah) | Skor 3 (Sedang) | Skor 5 (Tinggi) |
-|---|---|---|---|
-| **D1 — Stakes / Risiko Kegagalan** | Konsekuensi minor jika learner gagal (orientasi, awareness) | Berdampak ke kinerja tim/departemen (sales, CS) | Zero-tolerance (keselamatan fisik, hukum, klinis, audit finansial) |
-| **D2 — Kompleksitas Skill** | Recall fakta, terminologi, atau prosedur sederhana | Prosedur multi-langkah dengan pertimbangan situasional | Cognitive skill kompleks, heuristik, variabel saling terkait |
-| **D3 — Tekanan Waktu / Delivery** | Timeline longgar (>12 minggu), iterasi bebas | Standar korporat (6–12 minggu) | Sangat cepat (<6 minggu) atau butuh rilis prototipe bertahap |
-| **D4 — Orientasi Hasil** | Transfer pemahaman konseptual jangka panjang | Penyelesaian tugas kerja prosedural spesifik | Perubahan perilaku terukur langsung di lapangan |
-| **D5 — Konteks Governance** | Tim mandiri, startup, approval minimal | Korporat menengah, review berkala dengan SME | Regulasi ketat, audit eksternal, multi-stakeholder formal sign-off |
+#### Kategori A: Classroom-Oriented Models (Fokus Pengajar, Media, & Fleksibilitas)
+1. **The Kemp, Morrison & Ross Model (2019)**:
+   * *Karakteristik*: Desain sirkular-oval non-linier. Memungkinkan perancang masuk dari titik mana pun (topik, karakteristik siswa, atau asesmen) tanpa urutan sekuensial kaku.
+   * *Cocok Untuk*: Pendidikan tinggi, kurikulum sekolah, dan kursus pelatihan internal yang dinamis.
+2. **The Gerlach and Ely Model (1980)**:
+   * *Karakteristik*: Menentukan konten dan objektif secara simultan (*concurrent*), disusul alokasi waktu, ruang, dan pemilihan sumber daya.
+   * *Cocok Untuk*: Pengajar K-12 dan instruktur teknis yang terbiasa berpikir berbasis materi (*content-first*).
+3. **Understanding by Design (UbD - Wiggins & McTighe, 2005)**:
+   * *Karakteristik*: Perencanaan mundur (*backward design*): Stage 1 Desired Results -> Stage 2 Assessment Evidence (GRASPS) -> Stage 3 Learning Plan (WHERETO).
+   * *Cocok Untuk*: Pembelajaran berorientasi transfer pemahaman mendalam dan berpikir kritis.
 
-### 2.2 Profil Kecocokan Framework per Dimensi
+#### Kategori B: Product-Oriented Models (Fokus Paket Siap Pakai & Iterasi)
+4. **The Pebble in the Pond Model (Merrill, 2020)**:
+   * *Karakteristik*: Pendekatan *problem-centered* melalui efek riak air: *Problem Definition → Problem Progression → Instructional Strategy → Prototype → Evaluate*.
+   * *Cocok Untuk*: Pelatihan teknis dan pemecahan masalah nyata tanpa harus terjebak penulisan objektif teoritis di awal.
+5. **The Four-Component Instructional Design (4C/ID - van Merriënboer, 2017)**:
+   * *Karakteristik*: Mengintegrasikan 4 komponen: Whole Learning Tasks, Supportive Information, Procedural Information, dan Part-Task Practice.
+   * *Cocok Untuk*: Keterampilan kognitif kompleks, software architecture, troubleshooting mesin rumit.
+6. **The Layers-of-Necessity Model (Tessmer & Wedman, 1990)**:
+   * *Karakteristik*: Model evolusioner berbasis waktu dan sumber daya. Dimulai dari Layer 1 (MVP instruksional sederhana), lalu menambah Layer 2..n seiring ketersediaan waktu.
+   * *Cocok Untuk*: Proyek dengan kendala sumber daya ketat, startup, dan situasi darurat.
+7. **Agile Development Model (Beck et al., 2001; Dousay & Branch, 2022)**:
+   * *Karakteristik*: Iteratif, participatory, daily stand-up, working product over documentation, sprint deliverable.
+   * *Cocok Untuk*: Tim produk digital, e-learning cepat, dan lingkungan kerja software.
+8. **Michael Allen's SAM (Successive Approximation Model)**:
+   * *Karakteristik*: Savvy Start kickoff -> Iterative Prototyping (Alpha, Beta, Gold) dengan feedback berkala dari SME.
+9. **Cathy Moore Action Mapping (2017)**:
+   * *Karakteristik*: Analisis gap kinerja bisnis murni -> target perilaku nyata -> skenario keputusan bercabang -> informasi minimal esensial.
 
-Setiap framework memiliki profil afinitas terhadap skor di tiap dimensi:
+#### Kategori C: System-Oriented Models (Fokus Skala Enterprise & Regulasi Ketat)
+10. **The Dick, Carey and Carey Model (2015)**:
+    * *Karakteristik*: Pendekatan sistem preskriptif dengan analisis hierarki tugas subordinat dan instrumen tes berbasis kriteria.
+    * *Cocok Untuk*: Pelatihan keselamatan kerja, sistem penerbangan, klinis, dan kepatuhan hukum berisiko tinggi.
+11. **The ISD Model 2: for Practitioners (Seels & Glasgow, 1997)**:
+    * *Karakteristik*: Menempatkan manajemen proyek dan difusi inovasi (*diffusion of adoption*) sepanjang fase desain hingga rilis.
+    * *Cocok Untuk*: Transformasi L&D korporat besar di mana tantangan terbesarnya adalah adopsi pengguna.
+12. **The Instructional Project Development and Management (IPDM) Model (Gentry, 1994)**:
+    * *Karakteristik*: 8 komponen pengembangan + 5 proses pendukung terpisah (*Management, Information Handling, Resource Allocation, Personnel, Facilities*).
+    * *Cocok Untuk*: Proyek multi-departemen berskala besar yang membutuhkan pengadaan fasilitas dan vendor luar.
+13. **The Interservices Procedures for ISD (IPISD - Branson et al., 1975)**:
+    * *Karakteristik*: Standar militer 5 fase (Analyze, Design, Develop, Implement, Control) terbagi dalam 20 langkah dengan kontrol mutu lapangan ketat.
+14. **ADDIE Generic Paradigm (Branch, 2017)**:
+    * *Karakteristik*: Kerangka kerja konseptual makro standar industri.
 
-| Framework | D1 Stakes | D2 Kompleksitas | D3 Waktu / Delivery | D4 Orientasi Hasil | D5 Governance |
-|---|---|---|---|---|---|
-| **ADDIE Classic** | Cocok stakes sedang–tinggi | Cocok semua level | Cocok timeline longgar | Cocok transfer & tugas | Cocok governance ketat |
-| **SAM (Allen)** | Cocok stakes rendah–sedang | Cocok sedang | **Sangat cocok** timeline cepat/iteratif | Cocok tugas kerja | Kurang cocok governance sangat ketat |
-| **Dick & Carey** | **Sangat cocok** stakes tinggi | Cocok kompleksitas tinggi (prosedural) | Cocok timeline longgar | Cocok tugas presisi | **Sangat cocok** governance ketat/regulasi |
-| **Action Mapping (Moore)**| Cocok stakes sedang | Cocok sedang | Cocok cepat–sedang | **Sangat cocok** perubahan perilaku | Kurang cocok governance sangat ketat |
-| **Backward Design (UbD)** | Cocok stakes rendah–sedang | Cocok kompleksitas konseptual | Cocok timeline longgar | **Sangat cocok** transfer konseptual | Cocok akademik/edukasi formal |
-| **4C/ID** | Cocok stakes sedang–tinggi | **Sangat cocok** kompleksitas tinggi | Cocok timeline longgar | Cocok tugas kompleks | Cocok governance sedang–ketat |
-
-### 2.3 Logika Engine & Aturan Ambang Batas 20 Poin
-
-1. **Penilaian Awal**: Agent menilai proyek pada kelima dimensi (D1–D5) berdasarkan input user. Jika informasi belum lengkap, gunakan estimasi default yang masuk akal dan tandai secara transparan.
-2. **Kalkulasi Skor Kecocokan**: Hitung skor kecocokan masing-masing framework (skala 0–100).
-3. **Urutkan Peringkat**: Urutkan framework dari skor tertinggi (#1, #2, dst.).
-4. **Aturan Single Framework (Selisih > 20 Poin)**:
-   - Jika selisih skor antara peringkat #1 dan peringkat #2 **lebih dari 20 poin**, gunakan framework peringkat #1 secara tunggal.
-   - Status kepercayaan: **Confidence: High**.
-5. **Aturan Hybrid Mandatori (Selisih ≤ 20 Poin)**:
-   - Jika selisih skor antara peringkat #1 dan #2 **20 poin atau kurang**, ini merupakan indikator kuat bahwa proyek bersifat lintas domain (mis. kepatuhan berisiko tinggi namun berorientasi perubahan perilaku).
-   - Agent **wajib** merekomendasikan salah satu arsitektur hybrid resmi (lihat Bagian 3), bukan memaksakan satu model.
-   - Status kepercayaan: **Confidence: Medium**.
-6. **User Override**:
-   - Jika user secara eksplisit meminta framework tertentu (mis. *"gunakan SAM"*), pilihan user selalu diutamakan. Agent mencatat skor diagnostik dan memberikan catatan trade-off singkat (mis. *"Kamu memilih SAM, namun karena D1=5 (safety-critical), kami merekomendasikan penambahan quality gate ala Dick & Carey pada tahap validasi prototipe"*).
-7. **Standar Output Diagnostik Transparan**:
-   Setiap rekomendasi model wajib menampilkan tabel diagnostik:
-   ```
-   Framework Terpilih: [Framework Tunggal atau Hybrid Pola X]
-   Confidence: [High / Medium / Low]
-
-   | Dimensi | Skor (1-5) | Justifikasi Kontekstual |
-   |---|:---:|---|
-   | D1 Stakes / Risiko | [X]/5 | [Alasan ringkas] |
-   | D2 Kompleksitas | [X]/5 | [Alasan ringkas] |
-   | D3 Waktu / Delivery | [X]/5 | [Alasan ringkas] |
-   | D4 Orientasi Hasil | [X]/5 | [Alasan ringkas] |
-   | D5 Governance | [X]/5 | [Alasan ringkas] |
-
-   Rasional Pemilihan: [Penjelasan kenapa kombinasi/framework ini paling efektif]
-   User Override: [Catatan bahwa user dapat mengubah atau memilih model murni kapan saja]
-   ```
+#### Kategori D: Culturally Responsive & Inclusive Models (Konteks Modern)
+15. **The Culture Based Model (CBM - Patricia Young, 2008)**:
+    * *Karakteristik*: 8 area budaya materi (*Inquiry, Development, Team, Assessments, Brainstorming, Learners, Elements, Training*) untuk memastikan materi bebas dari bias budaya dominan dan relevan bagi audiens global.
 
 ---
 
-## 3. Arsitektur Hybrid Resmi
+## 3. Weighted Scoring Engine 5 Dimensi
 
-Pola kombinasi harus terstruktur dan teruji, bukan pencampuran ad-hoc tanpa dasar:
+Setiap proyek dinilai pada 5 dimensi (skala 1–5):
+* **D1 — Stakes / Risiko Kegagalan** (1: Minor, 3: Operasional tim, 5: Zero-tolerance/Hukum/Klinis)
+* **D2 — Kompleksitas Skill** (1: Recall, 3: Prosedural multi-langkah, 5: Kognitif kompleks & heuristik)
+* **D3 — Tekanan Waktu / Delivery** (1: Longgar >12 wks, 3: Standar 6-12 wks, 5: Cepat <6 wks)
+* **D4 — Orientasi Hasil** (1: Transfer konseptual, 3: Tugas kerja spesifik, 5: Perubahan perilaku terukur)
+* **D5 — Konteks Governance** (1: Startup/tim mandiri, 3: Korporat menengah, 5: Regulasi & audit ketat)
 
-| Pola | Kombinasi | Kapan Dipakai | Pembagian Peran Kerja |
-|---|---|---|---|
-| **Pola A — Behavioral Agile** | Action Mapping + SAM | Training perilaku dengan timeline ketat (<6 minggu) | **Action Mapping** menentukan *apa* yang harus dilatih (analisis gap perilaku, skenario keputusan) -> **SAM** mengatur *bagaimana* proses build-nya (Savvy Start, sprint Alpha/Beta/Gold bersama SME). |
-| **Pola B — Technical Rigor & Transfer** | Dick & Carey + Action Mapping | Compliance / teknis yang butuh perubahan perilaku nyata (bukan sekadar hafalan aturan) | **Dick & Carey** untuk analisis hierarki tugas, pemetaan subordinate skills, dan tes berbasis kriteria -> **Action Mapping** untuk desain skenario latihan bercabang dengan konsekuensi nyata di lapangan. |
-| **Pola C — Academic Enterprise** | UbD + ADDIE | Program pendidikan formal skala besar (universitas korporat, akademi kepemimpinan) | **UbD** untuk desain pemahaman mendalam (Stage 1 Desired Results, Stage 2 GRASPS authentic assessment, Stage 3 WHERETO) -> **ADDIE** untuk tata kelola budgeting makro, manajemen logistik, dan evaluasi operasional lintas angkatan. |
-| **Pola D — Complex Systems** | 4C/ID + SAM | Skill kompleks (software architecture, cyber incident, technical troubleshooting) dengan rilis bertahap | **4C/ID** untuk struktur Whole Learning Tasks, Supportive Information, dan Procedural Job Aids -> **SAM** untuk rilis prototipe fungsional bertahap per modul. |
-
-> **Prinsip Penting**: Hybrid **bukan default otomatis**. Jika proyek murni satu karakteristik (mis. kursus online pendek non-kritis dengan selisih skor > 20 poin), gunakan framework murni. Jangan memaksakan hybrid demi terlihat rumit.
+### Aturan Keputusan:
+* **Selisih Skor > 20 Poin**: Gunakan single model (#1 ranked), **Confidence: High**.
+* **Selisih Skor <= 20 Poin**: Rakit kombinasi dinamis melalui 4-layer M-IDA, **Confidence: Medium**.
+* **User Override**: Pilihan eksplisit user selalu diutamakan, disertai catatan diagnostik trade-off.
 
 ---
 
 ## 4. Standar "Industry-Ready" Deliverables
 
-Setiap output yang dihasilkan oleh skill ini harus berstandar operasional industri nyata:
-
-### 4.1 Larangan Keras "Placeholder Jargon"
-Output tidak boleh berhenti pada label teoritis atau instruksi abstrak.
-- ❌ **Dilarang:** *"Gunakan Gagné's Nine Events untuk sesi ini."* atau *"Lakukan icebreaking selama 10 menit."*
-- ✅ **Wajib:** *"Menit 00–05: Buka slide dengan studi kasus insiden downtime Q2 yang menelan biaya Rp 240 juta (Gain Attention) -> Menit 05–08: Bacakan sasaran pembelajaran: 'Peserta mampu mengisolasi kebocoran memori dalam 15 menit menggunakan profiler X' (State Objective) -> ..."* — lengkap dengan alokasi waktu menit-demi-menit, skrip fasilitator yang siap dibacakan langsung, dan instruksi transisi.
-
-### 4.2 Angka dan Detail Harus Kontekstual (Bukan Template Generik)
-- Timeline dan WBS harus menyesuaikan skala program yang diminta user. Dilarang memaksakan jadwal "16-Week WBS" jika training yang diminta hanya berupa workshop 90 menit atau microlearning 5 menit.
-- Jika user tidak memberikan rincian tertentu (misalnya anggaran, platform LMS, atau rasio fasilitator), tandai secara eksplisit: `[ASUMSI: LMS belum ditentukan; dirancang kompatibel SCORM 1.2 / Moodle]`. Jangan mengarang data operasional seolah-olah itu fakta yang disetujui stakeholder.
-
-### 4.3 Setiap Deliverable Wajib Memiliki "Definition of Done" (DoD)
-Setiap dokumen harus menutup dengan kriteria spesifik kapan deliverable tersebut dianggap siap pakai:
-```markdown
-### Project Definition of Done (DoD)
-- [ ] Sasaran pembelajaran disetujui tertulis oleh Business Sponsor & Head of L&D.
-- [ ] Skenario keputusan dan konsekuensi divalidasi keakuratannya oleh SME Compliance.
-- [ ] Seluruh skrip fasilitator telah lolos simulasi dry-run tanpa kebingungan instruksional.
-- [ ] Aset visual dan handout memenuhi uji aksesibilitas kontras WCAG 2.2 AA.
-```
-
-### 4.4 Larangan Generalisasi Tanpa Rujukan
-Dilarang mencantumkan statistik efektivitas tanpa nama peneliti dan tahun publikasi resmi (mis. dilarang menulis *"Penelitian membuktikan microlearning meningkatkan retensi 20%"* tanpa dasar ilmiah). Jika tidak ada rujukan empiris spesifik, gunakan prinsip kognitif kualitatif (mis. *"Mengurangi beban kognitif ekstraneus dengan teknik chunking"*).
-
-### 4.5 Uji "Bisa Dipakai Besok Pagi" (Ready-to-Deploy Test)
-Sebelum dokumen diserahkan, lakukan verifikasi:
-*"Jika dokumen ini dicetak dan diserahkan ke fasilitator atau developer besok pagi pukul 08.00, apakah mereka bisa langsung mengeksekusi tanpa perlu bertanya klarifikasi lagi?"* Jika masih terdapat tanda kurung siku kosong `[isi di sini]` atau instruksi menggantung, deliverable belum selesai.
+1. **Larangan Keras "Placeholder Jargon"**: Lengkap dengan durasi menit-demi-menit, skrip verbatim fasilitator/audio, dan langkah konkret tanpa instruksi abstrak.
+2. **Detail Kontekstual & `[ASUMSI]`**: Skala WBS dan timeline disesuaikan dengan durasi proyek riil; tandai asumsi yang belum dikonfirmasi stakeholder.
+3. **Project-Specific Definition of Done (DoD)**: Kriteria konkret kapan dokumen dianggap tuntas dan siap dieksekusi di lapangan.
+4. **Uji "Bisa Dipakai Besok Pagi"**: Jika dicetak pukul 08.00 pagi besok, fasilitator atau developer bisa langsung jalan tanpa kebingungan instruksional.

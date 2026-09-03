@@ -1,4 +1,25 @@
-# Instructional Design Knowledge Base
+# Learning Science & Instructional Knowledge Base (v3.2.0)
+
+> **Domain**: Cognitive Science, Educational Psychology, Seminal Learning Theories, & Contemporary Instructional Research  
+> **Standard**: Grounded in 75+ canonical theories and the AECT Survey of Instructional Design Models (6th Edition)
+
+---
+
+## 🧭 Dynamic Theory Selection Framework (Sistematika Pemilihan Teori)
+
+Alih-alih mengandalkan teori secara acak atau kaku, agen menganalisis kebutuhan proyek dan memetakan teori pembelajaran yang paling tepat dari knowledge base berdasarkan **7 Kategori Tantangan Pembelajaran**:
+
+| Tantangan Pembelajaran / Domain | Teori Pembelajaran Utama | Mekanisme Desain Nyata | Rujukan Kunci |
+|---|---|---|---|
+| **1. Kognitif Kompleks & Problem-Solving** | • **Cognitive Load Theory (CLT)**<br>• **4C/ID Model**<br>• **Cognitive Flexibility Theory**<br>• **Mental Models** | • Berikan *worked examples* bertahap untuk pemula; pudarkan (*faded guidance*) untuk ahli (*Expertise Reversal Effect*).<br>• Bagi tugas kompleks ke dalam *Whole Learning Tasks* dan *Supportive Information*. | Sweller (2011), van Merriënboer (2017), Spiro (1990) |
+| **2. Prosedural Presisi & Otomatisasi Tugas** | • **Merrill's First Principles**<br>• **Behaviorist Task Chaining**<br>• **Fitts & Posner Motor Learning** | • Demonstrasi tugas utuh -> latihan terbimbing langkah-demi-langkah -> latihan berulang hingga mencapai otomatisasi (*part-task practice*). | Merrill (2002/2020), Skinner (1954), Fitts & Posner (1967) |
+| **3. Transfer Konseptual Mendalam & Berpikir Kritis** | • **Understanding by Design (UbD)**<br>• **Ausubel Subsumption Theory**<br>• **Flavell Metacognition** | • Tentukan *Enduring Understandings* & *Essential Questions* -> gunakan asesmen autentik berkonteks nyata (GRASPS) -> dorong self-assessment. | Wiggins & McTighe (2005), Ausubel (1968), Flavell (1979) |
+| **4. Motivasi, Drive, & Engagement Rendah** | • **Keller ARCS-E Model**<br>• **Self-Determination Theory (SDT)**<br>• **Csikszentmihalyi Flow Theory**<br>• **Dweck Growth Mindset** | • Bangkitkan *Attention* lewat studi kasus nyata; bangun *Relevance* ke karier peserta; bangun *Autonomy, Competence, & Relatedness*; jaga keseimbangan tantangan vs skill. | Keller (1987/2010), Deci & Ryan (2000), Csikszentmihalyi (1990) |
+| **5. Retensi Jangka Panjang & Kurva Lupa** | • **Retrieval Practice (Testing Effect)**<br>• **Spaced Practice / Distributed Learning**<br>• **Bjork Desirable Difficulties**<br>• **Interleaving** | • Sisipkan kuis penarikan memori berisiko rendah saat sesi.<br>• Jadwalkan booster retrieval pada 3, 7, dan 21 hari pasca-pelatihan.<br>• Acak variasi soal (*interleaving*) alih-alih latihan blok seragam. | Roediger & Karpicke (2006), Dunlosky (2013), Bjork (1994) |
+| **6. Pembelajaran Sosial, Tim, & Kohort** | • **Vygotsky Social Constructivism & ZPD**<br>• **Wenger Communities of Practice (CoP)**<br>• **Lave & Wenger Situated Learning**<br>• **Bandura Social Cognitive Theory** | • Rancang klinik konsultasi kasus antar-rekan (*peer clinics*).<br>• Buat forum refleksi komunitas kerja.<br>• Gunakan modeling peran fasilitator dan scaffolding dalam ZPD peserta. | Vygotsky (1978), Wenger-Trayner (2015), Bandura (1986) |
+| **7. Keberagaman Budaya & Aksesibilitas Inklusif** | • **Young's Culture Based Model (CBM)**<br>• **Ladson-Billings Culturally Relevant Pedagogy**<br>• **CAST Universal Design for Learning (UDL)** | • Analisis 8 area budaya materi (bahasa, ilustrasi, norma).<br>• Sediakan pilihan ganda untuk Engagement, Representation, dan Action & Expression. | Young (2008), Ladson-Billings (1995), CAST (2018) |
+
+---
 
 Curated canon of the field: learning theory foundations, design models & frameworks, and seminal books. Consult for lookup, attribution (author/year — never guess), or when a request calls for a framework outside the SKILL.md core set. Each entry ends with a "Consult when" guide.
 
