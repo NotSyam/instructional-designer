@@ -23,7 +23,7 @@ evidence_sources:
   - 'Cennamo, K., & Kalk, D. (2019) - Real World Instructional Design: An Iterative Approach (2nd Edition, Routledge)'
   - 'Sweller, J. (2011) / Kalyuga, S. (2007) - Cognitive Load Theory & Expertise Reversal Effect'
   - 'Roediger, H. L., & Karpicke, J. D. (2006) - The Power of Testing Memory: Retrieval Practice'
-  - 'Dunlosky, J. et al. (2013) - Improving Students\' Learning with Effective Learning Techniques'
+  - "Dunlosky, J. et al. (2013) - Improving Students' Learning with Effective Learning Techniques"
   - 'CAST (2018) - Universal Design for Learning Guidelines version 2.2 (3 Pillars)'
   - 'Young, P. A. (2008) - The Culture Based Model (CBM) in Instructional Design'
   - 'Merrill, M. D. (2020) - First Principles of Instruction & Pebble-in-the-Pond (AECT)'
