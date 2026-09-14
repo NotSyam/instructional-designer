@@ -5,6 +5,17 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ---
 
+## [3.5.0] - 2026-09-14
+### Added
+- **Visual Cognition Slide Deck (`/slides`)**: Grounded in Richard Mayer's 12 Multimedia Learning Principles, Allan Paivio's Dual Coding Theory, and Sweller's Cognitive Load Theory.
+- **The Zero-Bullet-Point Standard**: Strictly enforces spatial visual containers (split columns, 3-card grids, step progression chevrons, 2x2 matrices) instead of passive text bullet dumps.
+- **Visual Cognition Reference (`references/visual-cognition-and-slides.md`)**: Comprehensive operationalization of Mayer's CTML, 8 narrative deck architectures, and visual translations across 6 knowledge types.
+- **Responsive HTML Slide Deck Template (`resources/templates/visual-cognition-slide-deck.html`)**: Self-contained 16:9 presentation deck with pure JS `scaleDeck` auto-scaling, keyboard navigation (arrows/space), cognitive step reveals (`[data-step]`), and interactive retention check card.
+- **Visual Slides Generator Script (`scripts/visual_slides_to_html.py`)**: CLI script converting Markdown outlines into turnkey, responsive visual cognition HTML decks.
+- **Project Recipe 7 (`COMBINATIONS.md`)**: The Blended Visual Presentation Sprint connecting `/course-plan` -> `/slides` -> `/facilitator-guide` -> `/assessment`.
+
+---
+
 ## [3.4.0] - 2026-09-14
 ### Added
 - **Character Design for E-Learning (`/character`)**: Full cast spec sheet (`character-spec-sheet-template.md`) with 5 core emotional poses and AI image prompt generator using the Reference Image Anchor technique (Trina Rimmer, 2024).

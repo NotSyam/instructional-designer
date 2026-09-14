@@ -62,3 +62,8 @@ The templates, scripts, and Markdown artifacts provided in this repository are *
     * **Author**: Fastcat
     * **Repository**: [fastcat1741-0sy33/instructional-design-critic](https://github.com/fastcat1741-0sy33/instructional-design-critic)
     * **Attribution**: The multi-lens critique architecture (Rigor, Cognitive Demand, Access, Assessment Alignment, Feedback Depth), review stances (Supportive, Balanced, Adversarial), and the "Smallest Testable Alternative" experiment formulation are adapted from Fastcat's `instructional-design-critic`.
+
+11. **Visual Cognition Slide Design & Dual Coding**:
+    * **Authors / Organization**: edu-ai-builders (*visual-cognition-slides*, 2024), Richard Mayer, and Allan Paivio.
+    * **Repository**: [edu-ai-builders/visual-cognition-slides](https://github.com/edu-ai-builders/visual-cognition-slides)
+    * **Attribution**: The Dual Coding presentation heuristics (visuals carry independent semantic weight), the Zero-Bullet-Point Law (spatial layouts, cards, flows), 8 narrative structures (Contrastive, Problem-Solution, Unpacking, etc.), responsive scaleCanvas engine, and visual translation of the 6 knowledge types are adapted with appreciation from `visual-cognition-slides`.

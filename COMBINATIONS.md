@@ -75,3 +75,18 @@
    * Formulate the single micro-intervention with the highest pedagogical ROI.
 3. **Step 3: QA Bug Tracking** (`/qa`):
    * Log critical blockers, instructional misalignments, and accessibility issues.
+
+---
+
+## Recipe 7: The Blended Visual Presentation Sprint
+*Designing a high-retention visual lecture, keynote, or workshop slide deck without bullet point fatigue.*
+
+1. **Step 1: Course Plan & Objectives** (`/course-plan`):
+   * Define module seat times, performance outcomes, and learning sequence.
+2. **Step 2: Visual Cognition Deck Generation** (`/slides`):
+   * Select narrative architecture (e.g. Problem-Solution or Contrastive) and apply the Zero-Bullet-Point rule.
+   * Transform each concept into cards, step progression flows, or 2x2 matrices using `visual_slides_to_html.py`.
+3. **Step 3: Facilitator Dialogue Integration** (`/facilitator-guide`):
+   * Pair the visual slides with 3-column timeline facilitator verbatim script (Mode B).
+4. **Step 4: Formative Quiz & Rubric** (`/assessment` ➔ `/qa`):
+   * Add a retention check slide and verify accessibility and visual contrast.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panduan Penggunaan & Use Case — Instructional Designer & Learning Architect (v3.4.0)</title>
+  <title>Panduan Penggunaan & Use Case — Instructional Designer & Learning Architect (v3.5.0)</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
     :root {
@@ -27,21 +27,10 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       scroll-behavior: smooth;
     }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0f172a;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #334155;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #475569;
-    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -51,9 +40,7 @@
       font-weight: 600;
       line-height: 1;
     }
-    .nav-link {
-      transition: all 0.2s ease;
-    }
+    .nav-link { transition: all 0.2s ease; }
     .nav-link:hover, .nav-link.active {
       color: #818cf8;
       background-color: rgba(99, 102, 241, 0.1);
@@ -78,16 +65,9 @@
       transition: background-color 0.2s;
       cursor: pointer;
     }
-    .copy-btn:hover {
-      background-color: #4f46e5;
-    }
-    .tab-btn.active {
-      background-color: #6366f1;
-      color: white;
-    }
-    .feature-card {
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    }
+    .copy-btn:hover { background-color: #4f46e5; }
+    .tab-btn.active { background-color: #6366f1; color: white; }
+    .feature-card { transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
     .feature-card:hover {
       transform: translateY(-2px);
       border-color: #6366f1;
@@ -107,7 +87,7 @@
         <div>
           <div class="flex items-center space-x-2">
             <h1 class="font-bold text-base sm:text-lg text-white tracking-tight">Instructional Designer</h1>
-            <span class="badge bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">v3.4.0 Master Suite</span>
+            <span class="badge bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">v3.5.0 Visual Cognition Suite</span>
           </div>
           <p class="text-xs text-slate-400 hidden sm:block">Interactive Guidebook, Command Catalog & Project Playbook</p>
         </div>
@@ -116,7 +96,7 @@
       <!-- Quick Search & Actions -->
       <div class="flex items-center space-x-3">
         <div class="relative hidden md:block w-64">
-          <input type="text" id="commandSearch" placeholder="Cari /course-plan, /storyboard, dsb..." 
+          <input type="text" id="commandSearch" placeholder="Cari /course-plan, /slides, /storyboard..." 
                  class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition">
           <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -137,7 +117,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-8">
           <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-4">
-            <span>🚀 Alur Kerja Lengkap: Dari Kurikulum (/course-plan) hingga Pre-Flight QA (/qa)</span>
+            <span>🚀 Alur Kerja Lengkap: Dari Kurikulum (/course-plan), Slide Kognisi (/slides), hingga QA (/qa)</span>
           </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Panduan Komprehensif AI Agent Skill <br class="hidden sm:inline"/>
@@ -146,14 +126,14 @@
             </span>
           </h2>
           <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-            Panduan resmi <strong>v3.4.0 Master Suite</strong> yang mengutamakan <strong>Main Skills</strong> yang paling sering dicari: perumusan cetak biru kurikulum (<code class="text-indigo-300">/course-plan</code>), master dokumen arsitektur (<code class="text-indigo-300">/idd</code>), prototipe strategi (<code class="text-indigo-300">/treatment</code>), naskah layar e-learning (<code class="text-indigo-300">/storyboard</code>), hingga kontrol kualitas akhir (<code class="text-indigo-300">/qa</code>).
+            Panduan resmi <strong>v3.5.0 Visual Cognition Suite</strong> yang mengutamakan <strong>Main Skills</strong> yang paling dicari: perumusan silabus (<code class="text-indigo-300">/course-plan</code>), cetak biru arsitektur (<code class="text-indigo-300">/idd</code>), dek slide presentasi kognitif zero-bullet-points (<code class="text-indigo-300">/slides</code>), naskah layar e-learning (<code class="text-indigo-300">/storyboard</code>), hingga kontrol kualitas pre-flight (<code class="text-indigo-300">/qa</code>).
           </p>
           <div class="mt-6 flex flex-wrap gap-2">
-            <span class="badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">12 Slash Commands Berurutan</span>
-            <span class="badge bg-blue-500/20 text-blue-400 border border-blue-500/30">12 Production Templates</span>
-            <span class="badge bg-purple-500/20 text-purple-400 border border-purple-500/30">9 Scientific References</span>
-            <span class="badge bg-amber-500/20 text-amber-400 border border-amber-500/30">6 Tested Recipes</span>
-            <span class="badge bg-rose-500/20 text-rose-400 border border-rose-500/30">Gate 0 & Adversarial Audit</span>
+            <span class="badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">13 Slash Commands Berurutan</span>
+            <span class="badge bg-blue-500/20 text-blue-400 border border-blue-500/30">13 Production Templates</span>
+            <span class="badge bg-purple-500/20 text-purple-400 border border-purple-500/30">10 Scientific References</span>
+            <span class="badge bg-amber-500/20 text-amber-400 border border-amber-500/30">7 Tested Recipes</span>
+            <span class="badge bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">Dual Coding & Zero-Bullet Law</span>
           </div>
         </div>
 
@@ -181,19 +161,26 @@
               </div>
               <span class="badge bg-purple-500/20 text-purple-300 text-[10px]">Langkah 2</span>
             </div>
+            <div class="p-2.5 bg-slate-900/90 rounded border border-cyan-500/30 flex justify-between items-center text-cyan-300 shadow-sm">
+              <div>
+                <div class="font-bold text-[11px]">/slides [topik presentasi / outline]</div>
+                <div class="text-[10px] text-slate-400 font-sans">3. Slide Kognitif Zero-Bullet-Point (HTML)</div>
+              </div>
+              <span class="badge bg-cyan-500/20 text-cyan-300 text-[10px]">Langkah 3</span>
+            </div>
             <div class="p-2.5 bg-slate-900/90 rounded border border-amber-500/30 flex justify-between items-center text-amber-300 shadow-sm">
               <div>
                 <div class="font-bold text-[11px]">/storyboard [topik modul]</div>
-                <div class="text-[10px] text-slate-400 font-sans">3. Naskah Layar, OST, VO & Layout</div>
+                <div class="text-[10px] text-slate-400 font-sans">4. Naskah Layar E-Learning, OST, VO & UI</div>
               </div>
-              <span class="badge bg-amber-500/20 text-amber-300 text-[10px]">Langkah 3</span>
+              <span class="badge bg-amber-500/20 text-amber-300 text-[10px]">Langkah 4</span>
             </div>
             <div class="p-2.5 bg-slate-900/90 rounded border border-rose-500/30 flex justify-between items-center text-rose-300 shadow-sm">
               <div>
                 <div class="font-bold text-[11px]">/qa [target build & LMS]</div>
-                <div class="text-[10px] text-slate-400 font-sans">4. Verifikasi Pre-Flight 4-Tier & Bug Log</div>
+                <div class="text-[10px] text-slate-400 font-sans">5. Verifikasi Pre-Flight 4-Tier & Bug Log</div>
               </div>
-              <span class="badge bg-rose-500/20 text-rose-300 text-[10px]">Langkah 4</span>
+              <span class="badge bg-rose-500/20 text-rose-300 text-[10px]">Langkah 5</span>
             </div>
           </div>
         </div>
@@ -210,9 +197,9 @@
         <p class="px-3 py-1 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Daftar Isi Guidebook</p>
         <a href="#section-core" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">1. Filosofi & 4 Pilar Utama</a>
         <a href="#section-gate0" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">2. Gate 0: When NOT to Design</a>
-        <a href="#section-commands" class="nav-link active block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">3. Katalog 12 Commands (Main First)</a>
-        <a href="#section-craft" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">4. Craft & Standar Kualitas</a>
-        <a href="#section-recipes" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">5. 6 Project Recipes Playbook</a>
+        <a href="#section-commands" class="nav-link active block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">3. Katalog 13 Commands (Main First)</a>
+        <a href="#section-craft" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">4. Craft & Kognisi Visual Slide</a>
+        <a href="#section-recipes" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">5. 7 Project Recipes Playbook</a>
         <a href="#section-industries" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">6. Nuansa Lintas Industri</a>
         <a href="#section-best-practices" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">7. Tips Prompting Efektif</a>
       </div>
@@ -221,10 +208,10 @@
       <div class="p-4 bg-gradient-to-br from-indigo-950/60 to-purple-950/40 border border-indigo-900/40 rounded-xl text-xs space-y-2">
         <div class="flex items-center space-x-2 text-indigo-300 font-bold">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <span>Struktur Teratur</span>
+          <span>Dual Coding Standard</span>
         </div>
         <p class="text-slate-300 text-[11px] leading-relaxed">
-          Katalog command sekarang disusun berurutan dari <strong>Main Skills</strong> (Kurikulum, IDD, Storyboard) lalu ke fitur pendukung (Karakter, Asesmen, QA).
+          Skill ini menerapkan hukum <strong>Zero Bullet Points</strong> pada slide: teks panjang diubah menjadi kartu spasial, alur langkah, atau matriks perbandingan.
         </p>
       </div>
     </nav>
@@ -240,7 +227,7 @@
         </div>
         
         <p class="text-slate-300 text-sm leading-relaxed mb-6">
-          Kebanyakan AI menghasilkan draf pelatihan yang terlihat rapi di permukaan namun rapuh secara pedagogi: sasaran hanya di level hafalan pasif, interaktivitas hanya klik-tab kosmetik, dan kuis berisi pilihan ganda yang sangat kentara jawabannya. Skill ini dibangun di atas sintesis <strong>4 pilar kanonikal</strong> untuk menjamin akurasi dan kesiapan lapangan tingkat tinggi:
+          Kebanyakan AI menghasilkan draf pelatihan yang terlihat rapi di permukaan namun rapuh secara pedagogi: sasaran hanya di level hafalan pasif, slide dipenuhi bullet points teks panjang yang membosankan, dan kuis berisi pilihan ganda yang sangat kentara jawabannya. Skill ini dibangun di atas sintesis <strong>4 pilar kanonikal</strong> untuk menjamin akurasi dan kesiapan lapangan tingkat tinggi:
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -318,7 +305,7 @@
                 <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800">
                   <div class="font-bold text-emerald-400 mb-1">Jika Jawabannya TIDAK:</div>
                   <p class="text-slate-400 text-[11px]">
-                    Ini adalah <em>genuine skill deficiency</em> (karyawan memang belum tahu caranya). Lanjutkan ke perancangan instruksional sistematis (pilih model yang tepat melalui `/course-plan`, `/idd`, atau `/storyboard`).
+                    Ini adalah <em>genuine skill deficiency</em> (karyawan memang belum tahu caranya). Lanjutkan ke perancangan instruksional sistematis (pilih model yang tepat melalui `/course-plan`, `/idd`, `/slides`, atau `/storyboard`).
                   </p>
                 </div>
               </div>
@@ -327,13 +314,13 @@
         </div>
       </section>
 
-      <!-- 3. Katalog Lengkap 12 Slash Commands (MAIN SKILLS FIRST!) -->
+      <!-- 3. Katalog Lengkap 13 Slash Commands (MAIN SKILLS FIRST!) -->
       <section id="section-commands" class="scroll-mt-20">
         <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
           <div class="flex items-center space-x-3">
             <div class="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold">3</div>
             <div>
-              <h2 class="text-2xl font-bold text-white tracking-tight">Katalog Lengkap 12 Slash Commands</h2>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Katalog Lengkap 13 Slash Commands</h2>
               <p class="text-xs text-emerald-400 font-medium">Disusun Berurutan dari Main Skills yang Paling Sering Dibutuhkan</p>
             </div>
           </div>
@@ -342,9 +329,9 @@
 
         <!-- Filter Tabs -->
         <div class="flex flex-wrap gap-2 mb-6" id="commandTabs">
-          <button class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">Semua Command (12)</button>
+          <button class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">Semua Command (13)</button>
           <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="main-curriculum">1. Kurikulum & Blueprint (Main Skills)</button>
-          <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="storyboard-media">2. Storyboard & Media Produksi</button>
+          <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="storyboard-media">2. Slide & Media Produksi</button>
           <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="interaction-sim">3. Simulasi, Karakter & Bites</button>
           <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="eval-qa">4. Asesmen & Quality Assurance</button>
         </div>
@@ -364,7 +351,7 @@
             </div>
             <h4 class="text-sm font-bold text-white mt-3">Curriculum Blueprint & Module Overview Matrix (Silabus Pelatihan)</h4>
             <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-              <strong>Deliverable nomor satu yang paling sering dicari!</strong> Memetakan kurikulum lengkap modul-demi-modul, sasaran belajar Bloom terukur (Verb + Object + Criterion), estimasi waktu duduk (*seat time*), aktivitas pengalaman belajar berbasis Dale's Cone, serta bentuk asesmen per modul.
+              <strong>Deliverable nomor satu yang paling dicari!</strong> Memetakan kurikulum lengkap modul-demi-modul, sasaran belajar Bloom terukur (Verb + Object + Criterion), estimasi waktu duduk (*seat time*), aktivitas pengalaman belajar berbasis Dale's Cone, serta bentuk asesmen per modul.
             </p>
             <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
               <div>
@@ -399,16 +386,6 @@
             <p class="text-xs text-slate-300 mt-1 leading-relaxed">
               Cetak biru arsitektur ISD korporat skala besar: Diagnostik M-IDA (ADDIE, SAM, 4C/ID, Action Mapping), profil persona pembelajar, analisis kebutuhan kinerja bisnis, strategi instruksional, evaluasi Kirkpatrick L1–L4, jadwal WBS, dan matriks tata kelola RACI.
             </p>
-            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div>
-                <span class="font-semibold text-slate-400 block mb-1">Kapan Digunakan:</span>
-                <span class="text-slate-300 text-[11px]">Proyek pelatihan enterprise, tender korporat, atau saat membutuhkan dokumen master komprehensif yang disetujui stakeholder sebelum produksi dimulai.</span>
-              </div>
-              <div>
-                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
-                <span class="text-slate-300 text-[11px]">Dokumen master 8 seksi (Business Need, Learner Persona, Strategy, Delivery Plan, Kirkpatrick Evaluation, WBS Timeline, RACI Governance).</span>
-              </div>
-            </div>
             <div class="mt-3">
               <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
               <div class="code-box p-3 text-xs text-emerald-300">
@@ -432,16 +409,6 @@
             <p class="text-xs text-slate-300 mt-1 leading-relaxed">
               Membuat prototipe konseptual 2-kolom yang memetakan bongkahan materi (*Content Chunks*) dengan ide treatment visual/interaksi (*what learners see, hear, and do*) sebelum menulis storyboard lengkap. Menghemat waktu revisi tim SME hingga 70%.
             </p>
-            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div>
-                <span class="font-semibold text-slate-400 block mb-1">Kapan Digunakan:</span>
-                <span class="text-slate-300 text-[11px]">Setelah silabus disetujui, sebelum menulis storyboard rinci, untuk menyepakati format media (animasi, podcast, simulasi, atau infografis).</span>
-              </div>
-              <div>
-                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
-                <span class="text-slate-300 text-[11px]">Tabel 2-kolom: Kolom Kiri (Ringkasan Materi & Fakta Kunci), Kolom Kanan (Visual, Audio & Aktivitas Pembelajar).</span>
-              </div>
-            </div>
             <div class="mt-3">
               <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
               <div class="code-box p-3 text-xs text-emerald-300">
@@ -474,12 +441,45 @@
             </div>
           </div>
 
-          <!-- 5. /storyboard (MAIN SKILL #4) -->
-          <div class="command-card bg-slate-800/80 border-2 border-amber-500/40 rounded-xl p-5 shadow-lg shadow-amber-500/10" data-category="storyboard-media">
+          <!-- 5. /slides (NEW in v3.5.0 Visual Cognition!) -->
+          <div class="command-card bg-slate-800/80 border-2 border-cyan-500/50 rounded-xl p-5 shadow-lg shadow-cyan-500/10" data-category="storyboard-media">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-700">/slides</span>
+                <span class="badge bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">⭐ Dual Coding & CTML</span>
+                <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Baru di v3.5.0</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">visual-cognition-slide-deck.html</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Visual Cognition Slide Deck Generator (Zero Bullet Points)</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Memproduksi dek slide presentasi HTML standalone atau Marp yang dioptimalkan untuk retensi memori jangka panjang berdasarkan teori Richard Mayer (CTML), Allan Paivio (Dual Coding), dan John Sweller (Cognitive Load). <strong>Mengharamkan bullet points teks panjang;</strong> menggantinya dengan kartu spasial, alur langkah, matriks 2x2, perbandingan 50/50, atau diagram analogi dengan kontrol keyboard (panah/spasi) dan auto-scale 16:9.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Kapan Digunakan:</span>
+                <span class="text-slate-300 text-[11px]">Saat merancang slide presentasi pengajaran, kuliah visual, keynote, webinar VILT, atau saat ingin mengubah materi teks membosankan menjadi presentasi interaktif siap pakai.</span>
+              </div>
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
+                <span class="text-slate-300 text-[11px]">File HTML slide deck standalone (1920x1080 responsive letterbox, step reveal, progress bar, retention check) atau Marp Markdown.</span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/slides Buatkan dek presentasi HTML 5 slide tentang 'Arsitektur Microservices vs Monolith' untuk engineer junior. Terapkan prinsip Dual Coding (zero bullet points), gunakan perbandingan split column, step flow, dan kuis retensi di akhir.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. /storyboard -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="storyboard-media">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
                 <span class="font-mono text-base font-bold text-amber-400 bg-amber-950/80 px-2.5 py-1 rounded border border-amber-700">/storyboard</span>
-                <span class="badge bg-amber-500/20 text-amber-300 border border-amber-500/30">⭐ Production Script</span>
+                <span class="badge bg-amber-500/20 text-amber-300 border border-amber-500/30">Production Script</span>
                 <span class="badge bg-slate-700 text-slate-300">Screen-by-Screen</span>
               </div>
               <span class="text-xs text-slate-400">Template: <code class="text-slate-300">storyboard-template.md</code></span>
@@ -488,16 +488,6 @@
             <p class="text-xs text-slate-300 mt-1 leading-relaxed">
               Memproduksi naskah storyboard layar-demi-layar yang siap dikirim langsung ke tim authoring (Storyline, Rise, Camtasia, atau video animator). Mencakup teks di layar (OST), naskah sulih suara (VO), tata letak UI, logika percabangan/interaksi, dan instruksi developer.
             </p>
-            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div>
-                <span class="font-semibold text-slate-400 block mb-1">Kapan Digunakan:</span>
-                <span class="text-slate-300 text-[11px]">Saat siap memproduksi konten e-learning, video animasi pembelajaran, atau modul simulasi interaktif.</span>
-              </div>
-              <div>
-                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
-                <span class="text-slate-300 text-[11px]">Script per layar (ID Slide, OST, VO, Visual Asset Layout, Interaction Trigger Logic, Developer Notes).</span>
-              </div>
-            </div>
             <div class="mt-3">
               <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
               <div class="code-box p-3 text-xs text-emerald-300">
@@ -507,7 +497,7 @@
             </div>
           </div>
 
-          <!-- 6. /facilitator-guide -->
+          <!-- 7. /facilitator-guide -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="storyboard-media">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -530,7 +520,7 @@
             </div>
           </div>
 
-          <!-- 7. /scenario -->
+          <!-- 8. /scenario -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="interaction-sim">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -553,7 +543,7 @@
             </div>
           </div>
 
-          <!-- 8. /character -->
+          <!-- 9. /character -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="interaction-sim">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -576,7 +566,7 @@
             </div>
           </div>
 
-          <!-- 9. /microlearning -->
+          <!-- 10. /microlearning -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="interaction-sim">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -599,7 +589,7 @@
             </div>
           </div>
 
-          <!-- 10. /assessment -->
+          <!-- 11. /assessment -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="eval-qa">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -622,7 +612,7 @@
             </div>
           </div>
 
-          <!-- 11. /critique -->
+          <!-- 12. /critique -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="eval-qa">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -645,7 +635,7 @@
             </div>
           </div>
 
-          <!-- 12. /qa -->
+          <!-- 13. /qa -->
           <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="eval-qa">
             <div class="flex items-start justify-between flex-wrap gap-2">
               <div class="flex items-center space-x-2">
@@ -675,14 +665,59 @@
       <section id="section-craft" class="scroll-mt-20">
         <div class="flex items-center space-x-3 mb-4">
           <div class="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold">4</div>
-          <h2 class="text-2xl font-bold text-white tracking-tight">Craft Heuristics & Anti-Shallow Standard</h2>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Craft Heuristics, Dual Coding & Kognisi Visual Slide</h2>
         </div>
 
         <p class="text-slate-300 text-sm leading-relaxed mb-6">
-          Berikut adalah detail teknis aturan pengerjaan craft e-learning yang tertanam langsung di dalam instruksi agen skill ini:
+          Berikut adalah detail teknis aturan pengerjaan craft e-learning dan desain slide berbasis kognisi visual yang tertanam langsung di dalam instruksi agen skill ini:
         </p>
 
-        <!-- Craft Feature 1: Character Anchor -->
+        <!-- Craft Feature: Dual Coding & Zero Bullet Point Standard -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6">
+          <div class="flex items-center space-x-2 text-cyan-400 font-bold text-sm mb-2">
+            <span>📊</span>
+            <h3>Dual Coding & Hukum "Zero Bullet Points" pada Slide (/slides)</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Berdasarkan riset <strong>Richard Mayer (CTML)</strong> dan <strong>Allan Paivio</strong>: menjejalkan bullet points teks di slide saat pembicara berbicara menyebabkan <em>Split-Attention Effect</em> dan kelebihan beban kognitif pada <em>phonological loop</em> pembelajar. Slide visual yang efektif harus mengubah teks menjadi salah satu dari <strong>8 wadah visual spasial</strong>:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-indigo-300 block mb-1">1. Split Comparison</span>
+              <p class="text-slate-400 text-[11px]">2 kolom (50/50) untuk Before vs After atau Masalah vs Solusi.</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-purple-300 block mb-1">2. 3-Card Grid</span>
+              <p class="text-slate-400 text-[11px]">3 kartu sejajar (33% masing-masing) untuk pilar utama atau fase kerja.</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-emerald-300 block mb-1">3. Step Flow Chevron</span>
+              <p class="text-slate-400 text-[11px]">Alur langkah linear berurutan (Langkah 01 ➔ Langkah 02 ➔ Langkah 03).</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-amber-300 block mb-1">4. 2x2 Matrix</span>
+              <p class="text-slate-400 text-[11px]">4 kuadran berbasis 2 sumbu ortogonal (misal: Dampak vs Upaya).</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-rose-300 block mb-1">5. Hero Stat Callout</span>
+              <p class="text-slate-400 text-[11px]">Angka display besar (84%, 3.5x) dengan 1 kalimat insight di bawahnya.</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-blue-300 block mb-1">6. Timeline Spine</span>
+              <p class="text-slate-400 text-[11px]">Garis tulang belakang waktu menghubungkan peristiwa bersejarah/roadmap.</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-teal-300 block mb-1">7. Concept Analogy</span>
+              <p class="text-slate-400 text-[11px]">Memetakan konsep baru ke objek familiar (misal: API = Pelayan Restoran).</p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-pink-300 block mb-1">8. Dilemma Cards</span>
+              <p class="text-slate-400 text-[11px]">Menghadapkan 2 opsi dengan konsekuensi dan trade-off masing-masing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Craft Feature: Character Anchor -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6">
           <div class="flex items-center space-x-2 text-indigo-400 font-bold text-sm mb-2">
             <span>🎨</span>
@@ -712,7 +747,7 @@
           </div>
         </div>
 
-        <!-- Craft Feature 2: UI Control Design -->
+        <!-- Craft Feature: UI Control Design -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6">
           <div class="flex items-center space-x-2 text-emerald-400 font-bold text-sm mb-2">
             <span>🖱️</span>
@@ -741,7 +776,7 @@
           </div>
         </div>
 
-        <!-- Craft Feature 3: Authoring Tool Matrix -->
+        <!-- Craft Feature: Authoring Tool Matrix -->
         <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5">
           <div class="flex items-center space-x-2 text-cyan-400 font-bold text-sm mb-2">
             <span>🛠️</span>
@@ -758,6 +793,12 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-800 text-slate-300 text-[11px]">
+                <tr>
+                  <td class="py-2.5 px-3 font-semibold text-white">Visual HTML Slides (/slides)</td>
+                  <td class="py-2.5 px-3">Kuliah visual, presentasi keynote, dek VILT, modul pengajaran mandiri di web/browser.</td>
+                  <td class="py-2.5 px-3 text-emerald-400">Zero-bullet points, responsif letterbox 16:9, navigasi keyboard, tanpa ketergantungan software mahal.</td>
+                  <td class="py-2.5 px-3 text-rose-400">Interaktivitas game 3D kompleks terbatas pada web engine.</td>
+                </tr>
                 <tr>
                   <td class="py-2.5 px-3 font-semibold text-white">Articulate Rise 360</td>
                   <td class="py-2.5 px-3">Modul informasi cepat, mobile-first responsive, microlearning, pedoman SOP.</td>
@@ -783,11 +824,11 @@
 
       </section>
 
-      <!-- 5. 6 Project Recipes Playbook -->
+      <!-- 5. 7 Project Recipes Playbook -->
       <section id="section-recipes" class="scroll-mt-20">
         <div class="flex items-center space-x-3 mb-4">
           <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">5</div>
-          <h2 class="text-2xl font-bold text-white tracking-tight">6 Tested Project Recipes Playbook</h2>
+          <h2 class="text-2xl font-bold text-white tracking-tight">7 Tested Project Recipes Playbook</h2>
         </div>
 
         <p class="text-slate-300 text-sm leading-relaxed mb-6">
@@ -795,6 +836,26 @@
         </p>
 
         <div class="space-y-4">
+
+          <!-- Recipe 7: Blended Visual Presentation Sprint (NEW) -->
+          <div class="p-4 bg-slate-800/80 border-2 border-cyan-500/40 rounded-xl shadow-lg shadow-cyan-500/10">
+            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+              <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+                <span class="text-cyan-400">Recipe 7:</span>
+                <span>The Blended Visual Presentation Sprint (Slide Kuliah Kognitif & Naskah Trainer)</span>
+              </h3>
+              <span class="badge bg-cyan-950 text-cyan-300 border border-cyan-700 font-mono text-[10px]">Alur: /course-plan ➔ /slides ➔ /facilitator-guide ➔ /assessment</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+              Gunakan saat merancang presentasi visual berdaya serap tinggi untuk sesi kuliah, workshop korporat, atau webinar VILT tanpa membuat peserta bosan dengan slide teks panjang.
+            </p>
+            <div class="p-3 bg-slate-900/80 rounded-lg text-xs font-mono text-slate-300 space-y-1.5 border border-slate-800">
+              <div><span class="text-cyan-400">Langkah 1:</span> Jalankan <code>/course-plan</code> untuk menetapkan sasaran Bloom dan alokasi durasi.</div>
+              <div><span class="text-cyan-400">Langkah 2:</span> Jalankan <code>/slides</code> untuk menghasilkan dek slide HTML responsif 16:9 zero-bullet-points.</div>
+              <div><span class="text-cyan-400">Langkah 3:</span> Jalankan <code>/facilitator-guide</code> untuk menghasilkan dialog naskah trainer verbatim (Mode B).</div>
+              <div><span class="text-cyan-400">Langkah 4:</span> Jalankan <code>/assessment</code> untuk menambahkan kuis retensi interaktif di akhir presentasi.</div>
+            </div>
+          </div>
 
           <!-- Recipe 1 -->
           <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
@@ -957,10 +1018,10 @@
               Untuk hasil deliverable yang 100% presisi dan siap pakai, sertakan 4 elemen ini dalam prompt lu:
             </p>
             <ol class="list-decimal list-inside text-slate-300 text-[11px] space-y-1">
-              <li><strong>Slash Command:</strong> Tentukan deliverable spesifik (misal: <code>/course-plan</code> atau <code>/storyboard</code>).</li>
-              <li><strong>Target Audiens & Latar Belakang:</strong> Usia, jabatan, pengalaman (misal: "teller bank baru lulus kuliah").</li>
+              <li><strong>Slash Command:</strong> Tentukan deliverable spesifik (misal: <code>/course-plan</code>, <code>/slides</code>, atau <code>/storyboard</code>).</li>
+              <li><strong>Target Audiens & Latar Belakang:</strong> Usia, jabatan, pengalaman (misal: "engineer baru lulus kuliah").</li>
               <li><strong>Tantangan Kinerja / Problem Nyata:</strong> Apa yang sering salah di lapangan saat ini?</li>
-              <li><strong>Format / Media Target:</strong> Articulate Rise, Storyline 360, VILT, atau Video.</li>
+              <li><strong>Format / Media Target:</strong> Visual HTML Slides (16:9), Articulate Rise, Storyline 360, atau VILT.</li>
             </ol>
           </div>
 
@@ -970,7 +1031,7 @@
               <span>Anti-Patterns (Kesalahan yang Harus Dihindari)</span>
             </h4>
             <ul class="list-disc list-inside text-slate-400 text-[11px] space-y-1.5">
-              <li><strong class="text-slate-200">Prompt Terlalu Abstrak:</strong> Hanya mengetik <em>"buatkan training leadership"</em> tanpa batasan audiens atau tantangan spesifik.</li>
+              <li><strong class="text-slate-200">Menjejalkan Bullet Points di Slide:</strong> Menaruh 7 baris teks panjang di satu layar. Gantilah dengan kartu spasial atau alur langkah chevron.</li>
               <li><strong class="text-slate-200">Melompati Gate 0:</strong> Membangun kursus e-learning panjang untuk masalah yang sebenarnya cukup diselesaikan dengan checklist 1 halaman.</li>
               <li><strong class="text-slate-200">Kuis Pilihan Konyol:</strong> Membiarkan opsi salah yang terlalu jelas seperti "Marahi pelanggan dan lempar barang".</li>
             </ul>
@@ -980,12 +1041,12 @@
         <!-- Quick Interactive Reference Modal / Helper Trigger -->
         <div class="p-5 bg-gradient-to-r from-slate-900 to-indigo-950/50 border border-indigo-900/50 rounded-2xl flex items-center justify-between flex-wrap gap-4">
           <div>
-            <h4 class="text-sm font-bold text-white">Siap Membangun Modul Pelatihan Berstandar Industri?</h4>
+            <h4 class="text-sm font-bold text-white">Siap Membangun Presentasi & Modul Pelatihan Kognitif?</h4>
             <p class="text-xs text-slate-300 mt-1">Cukup ketik slash command di Antigravity, AI siap bertindak sebagai strategic thinking partner lu.</p>
           </div>
           <div class="flex space-x-2">
             <a href="#section-commands" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-lg transition shadow-lg shadow-indigo-600/30">
-              Lihat Katalog Command
+              Lihat Katalog 13 Commands
             </a>
           </div>
         </div>
@@ -999,16 +1060,15 @@
   <!-- Footer -->
   <footer class="border-t border-slate-800 bg-slate-950/80 py-6 mt-12 text-center text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-4">
-      <p>🎓 <strong>Instructional Designer AI Agent Skill (v3.4.0 Master Suite)</strong> — MIT License.</p>
+      <p>🎓 <strong>Instructional Designer AI Agent Skill (v3.5.0 Visual Cognition Suite)</strong> — MIT License.</p>
       <p class="mt-1 text-[11px] text-slate-400">
-        Grounded in AECT (Dousay & Branch), Routledge (Cennamo & Kalk), Trina Rimmer (id-skills-for-claude), and Fastcat (instructional-design-critic).
+        Grounded in AECT (Dousay & Branch), Routledge (Cennamo & Kalk), Trina Rimmer (id-skills-for-claude), Fastcat (instructional-design-critic), and edu-ai-builders (visual-cognition-slides).
       </p>
     </div>
   </footer>
 
   <!-- Script for Interactive Filters & Copy Snippets -->
   <script>
-    // Copy snippet functionality
     function copySnippet(btn) {
       const codeElement = btn.parentElement.querySelector('code');
       if (codeElement) {
@@ -1024,7 +1084,6 @@
       }
     }
 
-    // Command Filter Tabs
     const tabButtons = document.querySelectorAll('.tab-btn');
     const commandCards = document.querySelectorAll('.command-card');
 
@@ -1046,7 +1105,6 @@
       });
     });
 
-    // Search bar filter
     const searchInput = document.getElementById('commandSearch');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
@@ -1062,7 +1120,6 @@
       });
     }
 
-    // Highlight active nav item on scroll
     window.addEventListener('scroll', () => {
       const sections = document.querySelectorAll('section');
       const navLinks = document.querySelectorAll('.nav-link');

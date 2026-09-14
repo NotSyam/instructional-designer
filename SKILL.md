@@ -7,7 +7,7 @@ description: >
   methodology from Cennamo & Kalk (2019), performance consulting protocols, character design,
   and AI failure modes guards from Trina Rimmer (2024), and multi-lens adversarial critique from Fastcat (2024).
   Production slash commands: /storyboard, /treatment, /character, /qa, /idd, /course-plan,
-  /facilitator-guide, /workbook, /scenario, /assessment, /microlearning, /theory-match, /critique.
+  /facilitator-guide, /workbook, /scenario, /assessment, /microlearning, /theory-match, /critique, /slides.
 disable-model-invocation: false
 user-invocable: true
 effort: high
@@ -15,11 +15,14 @@ effort: high
 skill_id: instructional-designer
 skill_name: Instructional Designer & L&D Consultant
 domain: curriculum-design
-version: 3.4.0
+version: 3.5.0
 author: NotSyam
 language: en
 evidence_strength: strong
 evidence_sources:
+  - 'Mayer, R. E. (2021) - Multimedia Learning (3rd Edition, Cambridge)'
+  - 'Paivio, A. (1986) - Mental Representations: A Dual Coding Approach'
+  - 'edu-ai-builders (2024) - visual-cognition-slides: HTML slide design grounded in cognitive science'
   - 'Dousay, T. A., & Branch, R. M. (2022) - Survey of Instructional Design Models (6th Edition, AECT/Brill)'
   - 'Cennamo, K., & Kalk, D. (2019) - Real World Instructional Design: An Iterative Approach (2nd Edition, Routledge)'
   - 'Mager, R. F., & Pipe, P. (1997) - Analyzing Performance Problems (3rd Edition)'
@@ -81,7 +84,7 @@ tags:
 license: MIT
 ---
 
-# Instructional Designer & Learning Architect (v3.4.0 Master Suite)
+# Instructional Designer & Learning Architect (v3.5.0 Visual Cognition Suite)
 
 ## Role
 
@@ -98,6 +101,7 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 | Command | Output Deliverable | Focus & Execution Standard |
 |---|---|---|
 | `/storyboard` | **E-Learning & Video Storyboard** | Screen-by-screen script with On-Screen Text (OST), Voiceover Script (VO), Visual UI Layout, Branching/Interaction Logic, and Developer Notes. Ready for Articulate/Rise/Video production. |
+| `/slides` | **Visual Cognition Slide Deck** | Presentation deck (HTML/Marp) grounded in Dual Coding and CTML with zero bullet points, spatial layouts, and step reveals (visual-cognition-slides, 2024). |
 | `/treatment` | **Instructional Strategy Treatment** | 2-column creative prototype linking content chunks with treatment ideas (*what learners see, hear, and do*) before full storyboarding (Cennamo & Kalk, 2019). |
 | `/character` | **Character Spec Sheet & AI Prompts** | Scenario cast specification with 5 emotional poses, visual style guide, and AI image prompts using the Reference Image Anchor technique (Trina Rimmer, 2024). |
 | `/qa` | **E-Learning QA & Bug Tracker** | 4-tier pre-delivery verification (Functional, Instructional, Editorial, Accessibility WCAG 2.2 AA) with severity classification and bug tracking log. |
@@ -226,6 +230,7 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
 
 * **Templates (`resources/templates/`)**:
   * Storyboard: `storyboard-template.md`
+  * Visual Cognition Slide Deck: `visual-cognition-slide-deck.html`
   * Treatment: `treatment-template.md`
   * Character Spec Sheet: `character-spec-sheet-template.md`
   * E-Learning QA Bug Tracker: `elearning-qa-bug-tracker.md`
@@ -237,6 +242,7 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
   * Performance Rubric: `rubric-matrix-template.md`
   * Quality Self-Check & DoD: `course-quality-self-check.md`
 * **References (`references/`)**:
+  * Visual Cognition & Slides: `references/visual-cognition-and-slides.md`
   * Performance Consulting & Craft: `references/performance-consulting-and-craft.md`
   * Industry-Specific Considerations: `references/industry-specific-considerations.md`
   * Design Critique & Audit: `references/design-critique-and-audit.md`

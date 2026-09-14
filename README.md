@@ -1,9 +1,9 @@
-# 🎓 Instructional Designer AI Agent Skill (v3.4.0 Master Suite)
+# 🎓 Instructional Designer AI Agent Skill (v3.5.0 Visual Cognition Suite)
 
 [![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills_Standard-v2.0-blue.svg)](https://github.com/GarethManning/education-agent-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.4.0-green.svg)](CHANGELOG.md)
-[![Tests](https://img.shields.io/badge/Tests-Passing_6/6-brightgreen.svg)](tests/test_scripts.py)
+[![Version](https://img.shields.io/badge/Version-3.5.0-green.svg)](CHANGELOG.md)
+[![Tests](https://img.shields.io/badge/Tests-Passing_7/7-brightgreen.svg)](tests/test_scripts.py)
 [![Compatible](https://img.shields.io/badge/Harnesses-Claude_|_Codex_|_Hermes_|_Antigravity-purple.svg)](SKILL.md)
 
 An evidence-grounded **AI Agent Skill for Instructional Designers, L&D Consultants, Performance Consultants, and Curriculum Architects**.
@@ -23,6 +23,7 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 | Command | Output Deliverable | Focus & Execution Standard |
 |---|---|---|
 | `/storyboard` | **E-Learning & Video Storyboard** | Screen-by-screen script with On-Screen Text (OST), Voiceover Script (VO), Visual UI Layout, Branching/Interaction Logic, and Developer Notes. Ready for Articulate/Rise/Video production. |
+| `/slides` | **Visual Cognition Slide Deck** | Presentation deck (HTML/Marp) grounded in Dual Coding and CTML with zero bullet points, spatial layouts, and step reveals (visual-cognition-slides, 2024). |
 | `/treatment` | **Instructional Strategy Treatment** | 2-column creative prototype linking content chunks with treatment ideas (*what learners see, hear, and do*) before full storyboarding (Cennamo & Kalk, 2019). |
 | `/character` | **Character Spec Sheet & AI Prompts** | Scenario cast specification with 5 emotional poses, visual style guide, and AI image prompts using the Reference Image Anchor technique (Trina Rimmer, 2024). |
 | `/qa` | **E-Learning QA & Bug Tracker** | 4-tier pre-delivery verification (Functional, Instructional, Editorial, Accessibility WCAG 2.2 AA) with severity classification and bug tracking log. |
@@ -88,6 +89,7 @@ Run an evidence-backed review using 5 specialized lenses:
 │   ├── knowledge-base.md                    # 75+ learning theories & dynamic selection matrix
 │   ├── modern-edtech-and-microlearning.md   # H5P matrix, xAPI schemas, spaced retrieval
 │   ├── performance-consulting-and-craft.md  # "When NOT to Design", AI failure modes, Storyline/Rise
+│   ├── visual-cognition-and-slides.md       # Dual Coding, Zero-Bullet-Point standard, Mayer CTML
 │   └── system-prompt-plain.txt              # Plain-text mirror for non-file LLM harnesses
 ├── resources/templates/
 │   ├── branching-scenario-template.md       # Interactive decision-tree simulation script
@@ -103,7 +105,8 @@ Run an evidence-backed review using 5 specialized lenses:
 │   └── treatment-template.md                # 2-column chunk-to-media creative treatment
 ├── scripts/
 │   ├── outline_to_slides.py                 # Marp slide deck generator
-│   └── quiz_to_gift.py                      # Canvas/Moodle GIFT & XML quiz exporter
+│   ├── quiz_to_gift.py                      # Canvas/Moodle GIFT & XML quiz exporter
+│   └── visual_slides_to_html.py             # Visual cognition HTML presentation generator
 ├── tests/
 │   ├── test_scripts.py                      # Unit test suite for automation scripts
 │   └── validate_skill.py                    # Skill structure & manifest validator
