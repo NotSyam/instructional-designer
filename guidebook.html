@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Penggunaan & Use Case — Instructional Designer & Learning Architect (v3.4.0)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-light: #e0e7ff;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --border: #334155;
+    }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .nav-link {
+      transition: all 0.2s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #818cf8;
+      background-color: rgba(99, 102, 241, 0.1);
+      border-left: 3px solid #6366f1;
+    }
+    .code-box {
+      position: relative;
+      background-color: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      background-color: #334155;
+      color: #e2e8f0;
+      border-radius: 0.25rem;
+      transition: background-color 0.2s;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background-color: #4f46e5;
+    }
+    .tab-btn.active {
+      background-color: #6366f1;
+      color: white;
+    }
+    .feature-card {
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-2px);
+      border-color: #6366f1;
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Top Sticky Header -->
+  <header class="sticky top-0 z-50 bg-[#0f172a]/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+          <span class="text-xl font-bold">🎓</span>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <h1 class="font-bold text-base sm:text-lg text-white tracking-tight">Instructional Designer</h1>
+            <span class="badge bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">v3.4.0 Master Suite</span>
+          </div>
+          <p class="text-xs text-slate-400 hidden sm:block">Interactive Guidebook, Command Catalog & Project Playbook</p>
+        </div>
+      </div>
+
+      <!-- Quick Search & Actions -->
+      <div class="flex items-center space-x-3">
+        <div class="relative hidden md:block w-64">
+          <input type="text" id="commandSearch" placeholder="Cari command atau use case..." 
+                 class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition">
+          <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <a href="https://github.com/NotSyam/instructional-designer" target="_blank" 
+           class="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          <span class="hidden sm:inline">GitHub Repo</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-indigo-950/40 via-slate-900/30 to-transparent py-10 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-4">
+            <span>🚀 Produksi Konten E-Learning Berstandar Industri</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            Panduan Komprehensif AI Agent Skill <br class="hidden sm:inline"/>
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400">
+              Instructional Designer & Learning Architect
+            </span>
+          </h2>
+          <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
+            Panduan praktis langkah-demi-langkah memanfaatkan kekuatan <strong>v3.4.0 Master Suite</strong>. Dilengkapi katalog interaktif 12 slash command, arsitektur Gate 0 (Robert Mager), formula konsistensi visual AI image prompt (Reference Image Anchor), verifikasi pre-flight 4-tier QA, serta 6 playbook use case dunia nyata.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">12 Slash Commands Siap Pakai</span>
+            <span class="badge bg-blue-500/20 text-blue-400 border border-blue-500/30">12 Production Templates</span>
+            <span class="badge bg-purple-500/20 text-purple-400 border border-purple-500/30">9 Scientific References</span>
+            <span class="badge bg-amber-500/20 text-amber-400 border border-amber-500/30">6 Tested Recipes</span>
+            <span class="badge bg-rose-500/20 text-rose-400 border border-rose-500/30">Gate 0 & Adversarial Audit</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 shadow-2xl backdrop-blur-sm">
+          <h3 class="text-sm font-bold text-white flex items-center space-x-2 mb-3">
+            <span class="text-indigo-400">⚡</span>
+            <span>Cara Paling Cepat Mulai (Quick Start)</span>
+          </h3>
+          <p class="text-xs text-slate-300 mb-3 leading-relaxed">
+            Ketik salah satu slash command berikut langsung di kolom chat AI Antigravity untuk mendapatkan deliverable siap pakai:
+          </p>
+          <div class="space-y-1.5 text-xs font-mono">
+            <div class="p-2 bg-slate-900/80 rounded border border-slate-700/50 flex justify-between items-center text-indigo-300">
+              <span>/character [deskripsi peran]</span>
+              <span class="text-[10px] text-slate-400 font-sans">Prompt & 5 Pose</span>
+            </div>
+            <div class="p-2 bg-slate-900/80 rounded border border-slate-700/50 flex justify-between items-center text-emerald-300">
+              <span>/storyboard [topik modul]</span>
+              <span class="text-[10px] text-slate-400 font-sans">OST, VO, Layout</span>
+            </div>
+            <div class="p-2 bg-slate-900/80 rounded border border-slate-700/50 flex justify-between items-center text-amber-300">
+              <span>/critique [paste naskah]</span>
+              <span class="text-[10px] text-slate-400 font-sans">Audit 5 Lensa</span>
+            </div>
+            <div class="p-2 bg-slate-900/80 rounded border border-slate-700/50 flex justify-between items-center text-rose-300">
+              <span>/qa [deskripsi modul/LMS]</span>
+              <span class="text-[10px] text-slate-400 font-sans">4-Tier Pre-Flight</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- Sidebar Navigation -->
+    <nav class="hidden lg:block lg:col-span-3 space-y-1 sticky top-24 self-start">
+      <div class="p-3 bg-slate-900/90 border border-slate-800 rounded-xl space-y-1 text-xs">
+        <p class="px-3 py-1 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Daftar Isi Guidebook</p>
+        <a href="#section-core" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">1. Filosofi & 4 Pilar Utama</a>
+        <a href="#section-gate0" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">2. Gate 0: When NOT to Design</a>
+        <a href="#section-commands" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">3. Katalog 12 Slash Commands</a>
+        <a href="#section-craft" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">4. Craft & Standar Kualitas Tinggi</a>
+        <a href="#section-recipes" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">5. 6 Project Recipes Playbook</a>
+        <a href="#section-industries" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">6. Nuansa Industri Khusus</a>
+        <a href="#section-best-practices" class="nav-link block px-3 py-2 rounded-lg font-medium text-slate-300 hover:text-white">7. Tips Prompting & Anti-Patterns</a>
+      </div>
+
+      <!-- Quick Summary Widget -->
+      <div class="p-4 bg-gradient-to-br from-indigo-950/60 to-purple-950/40 border border-indigo-900/40 rounded-xl text-xs space-y-2">
+        <div class="flex items-center space-x-2 text-indigo-300 font-bold">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>Anti-Shallow Quality</span>
+        </div>
+        <p class="text-slate-300 text-[11px] leading-relaxed">
+          Skill ini secara aktif menolak pola AI dangkal: tidak ada opsi kuis konyol, tidak ada klik kosmetik, dan tombol wajib mengomunikasikan fungsinya sendiri.
+        </p>
+      </div>
+    </nav>
+
+    <!-- Main Content Body -->
+    <main class="lg:col-span-9 space-y-12">
+
+      <!-- 1. Filosofi & 4 Pilar Utama -->
+      <section id="section-core" class="scroll-mt-20">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold">1</div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Filosofi & 4 Pilar Arsitektur</h2>
+        </div>
+        
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Kebanyakan AI menghasilkan draf pelatihan yang terlihat rapi di permukaan namun rapuh secara pedagogi: tujuan hanya di level *remember*, interaktivitas hanya klik-tab kosmetik, dan kuis berisi pilihan ganda yang jawabannya sudah sangat kentara. Skill ini dibangun di atas sintesis <strong>4 pilar kanonikal</strong> untuk menjamin akurasi dan kesiapan lapangan tingkat tinggi:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 feature-card">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="p-1.5 rounded-md bg-indigo-500/20 text-indigo-300 font-mono text-xs font-bold">Pilar 1</span>
+              <h3 class="font-bold text-sm text-white">M-IDA & Taksonomi Kanonikal (AECT)</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              Berdasarkan riset Dousay & Branch (Brill / AECT, 2022). Menerapkan <em>Open Modular ID Architecture</em> yang memilih model sesuai kebutuhan (ADDIE, SAM, Dick & Carey, 4C/ID, Action Mapping, Kemp) alih-alih memaksakan satu model kaku.
+            </p>
+            <div class="text-[11px] text-indigo-300 font-semibold">Fokus: Tata kelola makro & dekonstruksi hierarki tugas.</div>
+          </div>
+
+          <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 feature-card">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="p-1.5 rounded-md bg-purple-500/20 text-purple-300 font-mono text-xs font-bold">Pilar 2</span>
+              <h3 class="font-bold text-sm text-white">Real World Spiral & Segitiga Esensial</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              Berdasarkan riset Dr. Katherine Cennamo & Debby Kalk (Routledge, 2019). Menempatkan pembelajar di pusat (Learner at Center), menghubungkan Sasaran & Aktivitas & Asesmen secara selaras, dan iterasi spiral 5 fase.
+            </p>
+            <div class="text-[11px] text-purple-300 font-semibold">Fokus: Prototype treatment 2-kolom & kolaborasi SME.</div>
+          </div>
+
+          <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 feature-card">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="p-1.5 rounded-md bg-amber-500/20 text-amber-300 font-mono text-xs font-bold">Pilar 3</span>
+              <h3 class="font-bold text-sm text-white">Performance Consulting & Craft Heuristics</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              Berdasarkan karya Trina Rimmer (2024). Protokol pencegahan desain sia-sia, perumusan distractor kuis berbasis miskonsepsi nyata, anti-additive redundancy kontrol UI, dan pemilihan media realistis (Rise vs Storyline).
+            </p>
+            <div class="text-[11px] text-amber-300 font-semibold">Fokus: Pemecahan masalah kinerja bisnis & craft e-learning.</div>
+          </div>
+
+          <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 feature-card">
+            <div class="flex items-center space-x-2 mb-2">
+              <span class="p-1.5 rounded-md bg-rose-500/20 text-rose-300 font-mono text-xs font-bold">Pilar 4</span>
+              <h3 class="font-bold text-sm text-white">Multi-Lens Adversarial Critique Engine</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              Berdasarkan metodologi Fastcat (2024). Audit pedagogis kritis menggunakan 5 lensa: Rigor, Beban Kognitif (Sweller), Inklusivitas (UDL/WCAG), Validitas Asesmen, dan Kedalaman Feedback kausal nyata.
+            </p>
+            <div class="text-[11px] text-rose-300 font-semibold">Fokus: Uji stres materi & eksperimen mikro berdaya ungkit.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Gate 0: When NOT to Design -->
+      <section id="section-gate0" class="scroll-mt-20">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold">2</div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Gate 0: Protokol "When NOT to Design"</h2>
+        </div>
+
+        <div class="bg-amber-950/20 border border-amber-800/50 rounded-xl p-5 mb-6">
+          <div class="flex items-start space-x-3">
+            <span class="text-2xl">🛑</span>
+            <div>
+              <h3 class="text-sm font-bold text-amber-300">The Mager Life-or-Death Test (Robert Mager & Peter Pipe)</h3>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                Sebelum mengiyakan pembuatan kursus 60 menit yang mahal, ajukan satu pertanyaan diagnostik fundamental:
+              </p>
+              <div class="my-3 p-3 bg-slate-900/90 border-l-4 border-amber-500 text-xs italic text-amber-200">
+                "Apakah karyawan/pekerja tersebut bisa melakukan tugas ini dengan benar seandainya hidup atau pekerjaan mereka dipertaruhkan?"
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3 text-xs">
+                <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800">
+                  <div class="font-bold text-rose-400 mb-1">Jika Jawabannya YA:</div>
+                  <p class="text-slate-400 text-[11px]">
+                    Masalah tersebut <strong>BUKAN</strong> kesenjangan pengetahuan/keahlian. Penyebabnya adalah: sistem lemot, SOP ambigu, alat rusak, atau insentif yang salah. <strong>JANGAN BUAT KURSUS!</strong> Solusinya: Job aid, checklist 1 lembar, atau perbaikan alur kerja.
+                  </p>
+                </div>
+                <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800">
+                  <div class="font-bold text-emerald-400 mb-1">Jika Jawabannya TIDAK:</div>
+                  <p class="text-slate-400 text-[11px]">
+                    Ini adalah <em>genuine skill deficiency</em> (karyawan memang belum tahu caranya). Lanjutkan ke perancangan instruksional sistematis (pilih model yang tepat melalui `/idd` atau `/storyboard`).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Katalog Lengkap 12 Slash Commands -->
+      <section id="section-commands" class="scroll-mt-20">
+        <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold">3</div>
+            <h2 class="text-2xl font-bold text-white tracking-tight">Katalog Lengkap 12 Production Slash Commands</h2>
+          </div>
+          <span class="text-xs text-slate-400">Klik tab untuk memfilter kategori perintah</span>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 mb-6" id="commandTabs">
+          <button class="tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition" data-filter="all">Semua Command (12)</button>
+          <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="strategy">Strategi & Blueprint</button>
+          <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="content">Media & Storyboarding</button>
+          <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="sim">Simulasi & Karakter</button>
+          <button class="tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="qa">Asesmen & Audit QA</button>
+        </div>
+
+        <!-- Commands Grid -->
+        <div class="grid grid-cols-1 gap-6" id="commandGrid">
+
+          <!-- 1. /character -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="sim">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-indigo-400 bg-indigo-950/80 px-2.5 py-1 rounded border border-indigo-800">/character</span>
+                <span class="badge bg-purple-500/20 text-purple-300 border border-purple-500/30">Visual & Media</span>
+                <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Baru di v3.4.0</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">character-spec-sheet-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Character Spec Sheet & AI Prompt Generator (5 Emotional Poses)</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Membangun spesifikasi pemeran skenario pembelajaran secara lengkap dengan 5 pose emosi standar industri dan formula prompt Midjourney/DALL-E berbasis <em>Reference Image Anchor</em> untuk menjamin konsistensi visual 100% tanpa wajah berubah antar-slide.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Kapan Digunakan:</span>
+                <span class="text-slate-300 text-[11px]">Saat mendesain modul e-learning percabangan, simulasi customer service, atau video pembelajaran yang membutuhkan pemeran virtual konsisten.</span>
+              </div>
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
+                <span class="text-slate-300 text-[11px]">Profil karakter, peran instruksional (proxy/mentor), 5 pose emosional, dan naskah prompt AI (Anchor + Modifiers).</span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/character Buatkan karakter e-learning bernama 'Maya', usia 32 tahun, perawat senior di unit gawat darurat rumah sakit Jakarta. Lengkapi 5 pose emosi dan prompt Midjourney v6 dengan teknik Reference Image Anchor.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. /qa -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="qa">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800">/qa</span>
+                <span class="badge bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Quality Control</span>
+                <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Baru di v3.4.0</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">elearning-qa-bug-tracker.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">4-Tier E-Learning Quality Assurance & Bug Tracker Log</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Melakukan verifikasi pre-delivery komprehensif di 4 lapisan: <strong>Functional</strong> (SCORM/xAPI, navigation loop, resume state), <strong>Instructional</strong> (keselarasan tujuan, distractor kuis autentik), <strong>Editorial</strong> (terminologi & UX kontrol tombol), dan <strong>Accessibility</strong> (WCAG 2.2 AA). Disertai tabel pencatatan bug dengan ranking keparahan (*Critical, Major, Minor, Trivial*).
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Kapan Digunakan:</span>
+                <span class="text-slate-300 text-[11px]">Sebelum modul e-learning dikirim ke klien, dipublikasikan ke LMS Moodle/Canvas/Cornerstone, atau sebelum rilis final build.</span>
+              </div>
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
+                <span class="text-slate-300 text-[11px]">Checklist audit 4-tier berstatus Pass/Fail, rangkuman kepatuhan WCAG 2.2 AA, dan tabel Bug Tracker siap tindak lanjut.</span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/qa Jalankan audit QA 4-tier untuk modul e-learning Articulate Storyline 'Keamanan Siber & Anti-Phishing'. LMS target adalah Moodle via SCORM 2004 4th Edition. Cek aspek navigasi terkunci, kontras warna, dan distraktor kuis.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. /critique -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="qa">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-rose-400 bg-rose-950/80 px-2.5 py-1 rounded border border-rose-800">/critique</span>
+                <span class="badge bg-rose-500/20 text-rose-300 border border-rose-500/30">Pedagogy Audit</span>
+                <span class="badge bg-slate-700 text-slate-300">Fastcat Stances</span>
+              </div>
+              <span class="text-xs text-slate-400">Ref: <code class="text-slate-300">design-critique-and-audit.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Multi-Lens Adversarial Critique & Smallest Testable Experiment</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Membedah draf kurikulum atau naskah dengan kacamata ahli independen. Menguji Rigor (Bloom), Beban Kognitif (Sweller), Aksesibilitas (UDL), dan Validitas Asesmen. Menyajikan rekomendasi <em>Smallest Testable Experiment</em>—intervensi mikro yang memberi perbaikan terbesar tanpa merombak seluruh dokumen.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-700/60 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Pilihan Stance:</span>
+                <span class="text-slate-300 text-[11px]"><code class="text-indigo-300">supportive</code> (ideasi awal), <code class="text-emerald-300">balanced</code> (standar), <code class="text-rose-300">adversarial</code> (uji stres titik kegagalan).</span>
+              </div>
+              <div>
+                <span class="font-semibold text-slate-400 block mb-1">Deliverable Output:</span>
+                <span class="text-slate-300 text-[11px]">Evaluasi 5 lensa, risiko tersembunyi, asumsi cacat, dan 1 eksperimen perbaikan teruji.</span>
+              </div>
+            </div>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/critique [stance=adversarial] Uji stres naskah kuis pelatihan kepatuhan anti-korupsi ini. Cari celah di mana opsi salah terlalu mudah ditebak dan periksa apakah ada beban kognitif berlebih bagi karyawan baru.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. /storyboard -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="content">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-amber-400 bg-amber-950/80 px-2.5 py-1 rounded border border-amber-800">/storyboard</span>
+                <span class="badge bg-amber-500/20 text-amber-300 border border-amber-500/30">Core Production</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">storyboard-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Screen-by-Screen E-Learning & Media Storyboard</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Memproduksi naskah storyboard layar-demi-layar yang siap dikirim langsung ke developer Articulate Storyline, Camtasia, atau motion graphic designer. Mencakup teks di layar (OST), naskah sulih suara (VO), tata letak UI, logika percabangan/interaksi, dan catatan teknis pengembang.
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/storyboard Buatkan storyboard 6 layar untuk topik 'Penanganan Komplain Pelanggan Marah (De-eskalasi)' untuk kasir retail. Sertakan 1 skenario interaktif dengan 3 pilihan cabang dan feedback konsekuensi alami.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. /treatment -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="content">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-blue-400 bg-blue-950/80 px-2.5 py-1 rounded border border-blue-800">/treatment</span>
+                <span class="badge bg-blue-500/20 text-blue-300 border border-blue-500/30">Cennamo & Kalk 2019</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">treatment-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Instructional Strategy Treatment (2-Column Creative Prototype)</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Membuat prototipe konseptual 2-kolom yang memetakan bongkahan konten materi (*Content Chunks*) dengan ide treatment visual/interaksi (*what learners see, hear, and do*) sebelum menulis storyboard lengkap. Menghemat waktu revisi SME hingga 70%.
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/treatment Rancang dokumen treatment untuk modul 'Pengoperasian Forklift di Gudang Logistik'. Audiens operator baru lulus SMA. Tentukan apa yang dilihat, didengar, dan dilakukan peserta di setiap bab.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. /idd -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="strategy">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-purple-400 bg-purple-950/80 px-2.5 py-1 rounded border border-purple-800">/idd</span>
+                <span class="badge bg-purple-500/20 text-purple-300 border border-purple-500/30">Enterprise Blueprint</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">instructional-design-document-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Master Instructional Design Document (8 Seksi Arsitektur M-IDA)</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Cetak biru arsitektur ISD korporat skala besar: Diagnostik M-IDA, persona pembelajar, matriks kurikulum, strategi instruksional, evaluasi Kirkpatrick L1–L4, jadwal WBS, dan matriks tata kelola RACI.
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/idd Buatkan Master IDD lengkap untuk program 'Onboarding Software Engineer Baru' selama 4 minggu di startup fintech. Sertakan metrik Kirkpatrick L3 (efek ke kecepatan commit & bug rate) dan RACI matrix.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. /scenario -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="sim">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-pink-400 bg-pink-950/80 px-2.5 py-1 rounded border border-pink-800">/scenario</span>
+                <span class="badge bg-pink-500/20 text-pink-300 border border-pink-500/30">Action Mapping / 4C-ID</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">branching-scenario-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Branching Decision Simulation Script (Consequence Trees)</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Menyusun simulasi keputusan percabangan interaktif dengan dilema etika atau tantangan teknis berisiko tinggi. Setiap opsi memiliki konsekuensi naratif alami tanpa ada pilihan yang terlihat jelas sebagai jebakan atau pilihan yang terlalu suci (*saintly*).
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/scenario Buatkan skenario percabangan 3 tingkat mengenai 'Insiden Kebocoran Data Pasien di Rumah Sakit'. Peserta berperan sebagai Petugas IT Helpdesk. Setiap pilihan harus memiliki feedback konsekuensi langsung.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. /facilitator-guide -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="content">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-teal-400 bg-teal-950/80 px-2.5 py-1 rounded border border-teal-800">/facilitator-guide</span>
+                <span class="badge bg-teal-500/20 text-teal-300 border border-teal-500/30">Mode B Verbatim</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">facilitator-guide-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Complete 3-Column Timeline Facilitator / Trainer Guide</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Panduan trainer kelas tatap muka atau virtual (VILT) format 3 kolom (Waktu/Visual, Aktivitas Peserta, Dialog Naskah Fasilitator) dengan dialog verbatim siap baca (*Ready Tomorrow Morning*), penanda transisi, dan panduan debriefing diskusi kelompok.
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/facilitator-guide Buatkan panduan trainer 2 jam untuk workshop 'Manajemen Konflik Antar Tim'. Format 3 kolom timeline dengan naskah dialog persis apa yang harus diucapkan trainer saat membuka sesi.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. /course-plan -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="strategy">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-indigo-300 bg-indigo-950/80 px-2.5 py-1 rounded border border-indigo-800">/course-plan</span>
+                <span class="badge bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Curriculum Matrix</span>
+              </div>
+              <span class="text-xs text-slate-400">Template: <code class="text-slate-300">course-blueprint-template.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Curriculum Blueprint & Module Overview Matrix</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Memetakan struktur silabus lengkap, hierarki tujuan Bloom terukur, alokasi waktu duduk (*seat time*), aktivitas belajar berbasis Dale's Cone of Experience, dan instrumen asesmen per modul.
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/course-plan Buatkan silabus 5 modul untuk pelatihan 'Literasi Keuangan dan Investasi Reksa Dana untuk Pemula'. Total durasi belajar 6 jam.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. /assessment -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="qa">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded border border-cyan-800">/assessment</span>
+                <span class="badge bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">GIFT / Rubrik LMS</span>
+              </div>
+              <span class="text-xs text-slate-400">Script: <code class="text-slate-300">quiz_to_gift.py</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Assessment Bank (GIFT/Moodle XML) & 4-Tier Analytic Rubrics</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Menghasilkan bank soal kuis pilihan ganda berbasis kriteria dengan distraktor autentik (siap ekspor ke Canvas/Moodle melalui format GIFT atau XML), atau matriks rubrik evaluasi analitik 4-tier (Exemplary, Proficient, Developing, Inadequate).
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/assessment Buatkan 5 soal kuis format GIFT untuk materi 'Deteksi Email Phishing'. Setiap distraktor harus mencerminkan kesalahan umum staf kantor dan feedback menjelaskan indikator URL palsu.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. /microlearning -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="content">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-yellow-400 bg-yellow-950/80 px-2.5 py-1 rounded border border-yellow-800">/microlearning</span>
+                <span class="badge bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">3–5 Min Bite</span>
+              </div>
+              <span class="text-xs text-slate-400">Ref: <code class="text-slate-300">modern-edtech-and-microlearning.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">3–5 Minute Microlearning Bite & Spaced Retrieval Booster</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Merancang modul mikro berdaya serap tinggi dengan struktur 4-bagian (Hook, Konsep Tunggal, Aplikasi Praktis, Uji Retensi Cepat) plus jadwal dorongan pengulangan berkala (*Spaced Retrieval Schedule*: Hari ke-3, ke-7, ke-21) untuk melawan kurva lupa Ebbinghaus.
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/microlearning Buatkan modul mikro 3 menit tentang 'Teknik Pernapasan 4-7-8 untuk Meredakan Stres Sebelum Presentasi', lengkap dengan jadwal booster 3-7-21 hari.</code>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. /theory-match -->
+          <div class="command-card bg-slate-800/80 border border-slate-700 rounded-xl p-5" data-category="strategy">
+            <div class="flex items-start justify-between flex-wrap gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono text-base font-bold text-violet-400 bg-violet-950/80 px-2.5 py-1 rounded border border-violet-800">/theory-match</span>
+                <span class="badge bg-violet-500/20 text-violet-300 border border-violet-500/30">75+ Theories Knowledge Base</span>
+              </div>
+              <span class="text-xs text-slate-400">Ref: <code class="text-slate-300">knowledge-base.md</code></span>
+            </div>
+            <h4 class="text-sm font-bold text-white mt-3">Dynamic Theory & Model Diagnostics (75+ Models Matcher)</h4>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Mengevaluasi batasan proyek (tingkat risiko, kompleksitas tugas, waktu pengerjaan, jenis sasaran belajar) dan merekomendasikan pasangan teori belajar paling optimal dari basis pengetahuan 75+ teori (Cognitivism, Constructivism, Sweller CLT, Mayer CTML, Knowles Andragogy, dsb).
+            </p>
+            <div class="mt-3">
+              <span class="text-[11px] font-semibold text-slate-400 block mb-1">Contoh Pemanggilan Prompt:</span>
+              <div class="code-box p-3 text-xs text-emerald-300">
+                <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+                <code>/theory-match Proyek ini adalah pelatihan audit kepatuhan perbankan berisiko tinggi dengan waktu penyusunan 2 minggu. Cocokkan teori dan model instruksional terbaik untuk proyek ini.</code>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. Craft & Standar Kualitas Tinggi -->
+      <section id="section-craft" class="scroll-mt-20">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold">4</div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Craft Heuristics & Anti-Shallow Standard</h2>
+        </div>
+
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Berikut adalah detail teknis aturan pengerjaan craft e-learning yang tertanam langsung di dalam instruksi agen skill ini:
+        </p>
+
+        <!-- Craft Feature 1: Character Anchor -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6">
+          <div class="flex items-center space-x-2 text-indigo-400 font-bold text-sm mb-2">
+            <span>🎨</span>
+            <h3>Formula Reference Image Anchor (Konsistensi Karakter AI)</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Masalah terbesar menggunakan AI Image Generator (Midjourney / DALL-E) dalam e-learning adalah karakter yang wajah, gaya rambut, atau pakaiannya berubah di setiap slide. Formula anchor menyelesaikan masalah ini:
+          </p>
+          <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 text-xs font-mono text-slate-300 mb-3">
+            <span class="text-amber-400">[STATIC ANCHOR PROMPT]</span> + <span class="text-emerald-400">[SPECIFIC POSE SUFFIX]</span> + <span class="text-indigo-400">[CAMERA & LIGHTING]</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-amber-300 block mb-1">Gambar #1 (Anchor Seed):</span>
+              <p class="text-slate-400 text-[11px]">
+                <code>A 32-year-old female Indonesian nurse named Maya, wearing hospital teal scrubs, hair tied in a tidy bun, natural makeup, clean modern hospital corridor background with soft bokeh, corporate training photography style, cinematic studio lighting, 85mm portrait lens --ar 16:9</code>
+              </p>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded border border-slate-800">
+              <span class="font-bold text-emerald-300 block mb-1">Gambar #2-#5 (Pose Modifiers):</span>
+              <p class="text-slate-400 text-[11px]">
+                Pertahankan seluruh deskripsi anchor di atas, ganti <strong>hanya</strong> sufiks pose:<br/>
+                • Pose 2: <code>inspecting medical monitor, concerned diagnostic expression, hand on chin</code><br/>
+                • Pose 4: <code>warm confident smile, holding clipboard, thumbs up</code>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Craft Feature 2: UI Control Design -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5 mb-6">
+          <div class="flex items-center space-x-2 text-emerald-400 font-bold text-sm mb-2">
+            <span>🖱️</span>
+            <h3>UI Control Design: Anti-Additive Redundancy</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Kontrol dalam interface e-learning harus mengomunikasikan tujuannya sendiri secara intuitif tanpa instruksi meta yang meremehkan inteligensi pembelajar:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-rose-950/20 border border-rose-900/40 rounded-lg">
+              <span class="font-bold text-rose-400 block mb-1">❌ Anti-Pattern (Instruksi Berlebih):</span>
+              <ul class="list-disc list-inside text-[11px] text-slate-400 space-y-1">
+                <li>"Klik tombol Next di bawah ini untuk lanjut."</li>
+                <li>"Tarik slider ke kanan untuk menambah angka."</li>
+                <li>"Klik tab di atas untuk membaca materi."</li>
+              </ul>
+            </div>
+            <div class="p-3 bg-emerald-950/20 border border-emerald-900/40 rounded-lg">
+              <span class="font-bold text-emerald-400 block mb-1">✅ Standar Desain Bersih (Self-Communicating):</span>
+              <ul class="list-disc list-inside text-[11px] text-slate-300 space-y-1">
+                <li>Beri label tombol dengan kata kerja aktif: <code class="text-emerald-300">[Kirim Laporan]</code>, <code class="text-emerald-300">[Evaluasi Hasil]</code>.</li>
+                <li>Slider menampilkan angka dinamis saat digeser tanpa perlu teks pengantar.</li>
+                <li>Tab memiliki state visual kontras jelas (Active vs Inactive).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Craft Feature 3: Authoring Tool Matrix -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5">
+          <div class="flex items-center space-x-2 text-cyan-400 font-bold text-sm mb-2">
+            <span>🛠️</span>
+            <h3>Matriks Pemilihan Authoring Tools Industri</h3>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-700 text-slate-400">
+                  <th class="py-2 px-3">Tools</th>
+                  <th class="py-2 px-3">Kapan Harus Dipakai</th>
+                  <th class="py-2 px-3">Kekuatan Utama</th>
+                  <th class="py-2 px-3">Batasan Desain</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800 text-slate-300 text-[11px]">
+                <tr>
+                  <td class="py-2.5 px-3 font-semibold text-white">Articulate Rise 360</td>
+                  <td class="py-2.5 px-3">Modul informasi cepat, mobile-first responsive, microlearning, pedoman SOP.</td>
+                  <td class="py-2.5 px-3 text-emerald-400">Pengerjaan sangat cepat, tipografi sempurna di HP/tablet, modular.</td>
+                  <td class="py-2.5 px-3 text-rose-400">Percabangan terbatas, tidak mendukung variabel custom atau simulasi multi-state.</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 px-3 font-semibold text-white">Articulate Storyline 360</td>
+                  <td class="py-2.5 px-3">Simulasi software, skenario percabangan rumit, kalkulasi skor variabel, gamifikasi.</td>
+                  <td class="py-2.5 px-3 text-emerald-400">Kendali pixel-perfect, custom triggers, xAPI kustom, animasi layer.</td>
+                  <td class="py-2.5 px-3 text-rose-400">Tidak fluid-responsive di HP, waktu produksi lebih lama.</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 px-3 font-semibold text-white">Custom Web App (HTML5/SCORM)</td>
+                  <td class="py-2.5 px-3">Aplikasi kalkulator interaktif, audio sintetis Web Audio API, enkripsi anti-cheat kuis.</td>
+                  <td class="py-2.5 px-3 text-emerald-400">Kebebasan arsitektur total, ukuran file ringan, modern UI Tailwind.</td>
+                  <td class="py-2.5 px-3 text-rose-400">Memerlukan keahlian front-end web developer.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 5. 6 Project Recipes Playbook -->
+      <section id="section-recipes" class="scroll-mt-20">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold">5</div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">6 Tested Project Recipes Playbook</h2>
+        </div>
+
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          Kekuatan utama skill ini terletak pada kemampuannya merangkai beberapa command menjadi alur kerja proyek e-learning terpadu (diadopsi dari panduan <code class="text-indigo-300">COMBINATIONS.md</code>):
+        </p>
+
+        <div class="space-y-4">
+
+          <!-- Recipe 1 -->
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+              <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+                <span class="text-rose-400">Recipe 1:</span>
+                <span>Compliance Overhaul Sprint (Membongkar Modul Kepatuhan Membosankan)</span>
+              </h3>
+              <span class="badge bg-slate-900 text-slate-300 border border-slate-700 font-mono text-[10px]">Alur: Audit -> Mager Gate 0 -> IDD -> Skenario -> QA</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+              Gunakan saat perusahaan meminta "update materi kepatuhan/anti-korupsi/K3 tahunan" yang biasanya berupa slide teks 60 halaman yang di-skip karyawan.
+            </p>
+            <div class="p-3 bg-slate-900/80 rounded-lg text-xs font-mono text-slate-300 space-y-1.5 border border-slate-800">
+              <div><span class="text-indigo-400">Langkah 1:</span> Jalankan <code>/critique [adversarial]</code> pada slide lama untuk mengungkap titik kelemahan kognitif.</div>
+              <div><span class="text-indigo-400">Langkah 2:</span> Jalankan Gate 0: Filter kewajiban regulasi vs kesenjangan performa riil di lapangan.</div>
+              <div><span class="text-indigo-400">Langkah 3:</span> Jalankan <code>/scenario</code> untuk mengubah aturan hukum abstrak menjadi dilema percabangan nyata.</div>
+              <div><span class="text-indigo-400">Langkah 4:</span> Jalankan <code>/qa</code> untuk memastikan aksesibilitas WCAG 2.2 AA terpenuhi 100%.</div>
+            </div>
+          </div>
+
+          <!-- Recipe 2 -->
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+              <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+                <span class="text-blue-400">Recipe 2:</span>
+                <span>Technical Troubleshooting Simulation (Simulasi Penanganan Kerusakan Mesin/Sistem)</span>
+              </h3>
+              <span class="badge bg-slate-900 text-slate-300 border border-slate-700 font-mono text-[10px]">Alur: IDD -> Treatment -> Karakter -> Storyboard -> QA</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+              Gunakan saat merancang pelatihan teknis berisiko tinggi (misal: penanganan server mati, pemecahan masalah mesin pabrik, atau diagnosis medis darurat).
+            </p>
+            <div class="p-3 bg-slate-900/80 rounded-lg text-xs font-mono text-slate-300 space-y-1.5 border border-slate-800">
+              <div><span class="text-blue-400">Langkah 1:</span> Jalankan <code>/idd</code> dengan fokus Layer 2 M-IDA (model van Merriënboer 4C/ID untuk tugas kompleks).</div>
+              <div><span class="text-blue-400">Langkah 2:</span> Jalankan <code>/treatment</code> untuk memvalidasi alur visual dengan Subject Matter Expert (SME).</div>
+              <div><span class="text-blue-400">Langkah 3:</span> Jalankan <code>/character</code> untuk membuat avatar teknisi dengan 5 pose diagnostik.</div>
+              <div><span class="text-blue-400">Langkah 4:</span> Jalankan <code>/storyboard</code> untuk membuat naskah interaksi screen-by-screen Storyline.</div>
+            </div>
+          </div>
+
+          <!-- Recipe 3 -->
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+              <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+                <span class="text-amber-400">Recipe 3:</span>
+                <span>Rapid Microlearning Campaign (Kampanye Pelatihan Cepat 3–5 Menit)</span>
+              </h3>
+              <span class="badge bg-slate-900 text-slate-300 border border-slate-700 font-mono text-[10px]">Alur: Theory Match -> Microlearning -> Spaced Boosters -> QA</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+              Gunakan saat pekerja sibuk di lapangan dan hanya punya waktu 5 menit di sela kerja untuk belajar (misal: panduan peluncuran fitur software baru).
+            </p>
+            <div class="p-3 bg-slate-900/80 rounded-lg text-xs font-mono text-slate-300 space-y-1.5 border border-slate-800">
+              <div><span class="text-amber-400">Langkah 1:</span> Jalankan <code>/theory-match</code> untuk memilih prinsip Micro-nugget & Cognitive Load Theory.</div>
+              <div><span class="text-amber-400">Langkah 2:</span> Jalankan <code>/microlearning</code> untuk menghasilkan modul ringkas 4-bagian.</div>
+              <div><span class="text-amber-400">Langkah 3:</span> Sisipkan Spaced Retrieval Schedule (Pertanyaan pemacu di Hari ke-3, 7, dan 21).</div>
+            </div>
+          </div>
+
+          <!-- Recipe 4 -->
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+              <h3 class="text-sm font-bold text-white flex items-center space-x-2">
+                <span class="text-purple-400">Recipe 4:</span>
+                <span>Facilitator-Led Blended Workshop (Paket Lengkap Pelatihan Tatap Muka/VILT)</span>
+              </h3>
+              <span class="badge bg-slate-900 text-slate-300 border border-slate-700 font-mono text-[10px]">Alur: Course Plan -> Facilitator Guide -> Workbook -> Asesmen</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+              Gunakan untuk program pelatihan tatap muka atau webinar interaktif di mana trainer membutuhkan naskah kata-per-kata yang siap dibawakan besok pagi.
+            </p>
+            <div class="p-3 bg-slate-900/80 rounded-lg text-xs font-mono text-slate-300 space-y-1.5 border border-slate-800">
+              <div><span class="text-purple-400">Langkah 1:</span> Jalankan <code>/course-plan</code> untuk menetapkan alokasi menit dan aktivitas Dale's Cone.</div>
+              <div><span class="text-purple-400">Langkah 2:</span> Jalankan <code>/facilitator-guide</code> untuk menghasilkan panduan 3 kolom (dialog verbatim Mode B).</div>
+              <div><span class="text-purple-400">Langkah 3:</span> Jalankan <code>/workbook</code> untuk membuat lembar studi kasus peserta.</div>
+              <div><span class="text-purple-400">Langkah 4:</span> Jalankan <code>/assessment</code> untuk menghasilkan rubrik observasi performa 4-tier.</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6. Nuansa Industri Khusus -->
+      <section id="section-industries" class="scroll-mt-20">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold">6</div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Nuansa & Aturan Main Khusus Lintas Industri</h2>
+        </div>
+
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Instruksional desain bukan solusi "satu ukuran untuk semua". Skill ini secara otomatis mengkalibrasi konteks industri sesuai dengan pedoman <code class="text-indigo-300">references/industry-specific-considerations.md</code>:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <h4 class="font-bold text-white flex items-center space-x-1.5 mb-2">
+              <span class="text-emerald-400">🏥</span>
+              <span>Healthcare & Fasilitas Medis</span>
+            </h4>
+            <ul class="text-slate-300 text-[11px] space-y-1.5 list-disc list-inside">
+              <li><strong>Zero Tolerance for Factual Drift:</strong> Dosis obat, parameter klinis, dan protokol infeksius harus 100% presisi.</li>
+              <li><strong>Hierarki Klinis:</strong> Skenario harus mencerminkan komunikasi perawat ke dokter konsulen secara realistis (teknik SBAR).</li>
+              <li><strong>Privasi Pasien:</strong> Semua data studi kasus wajib disamarkan mematuhi aturan kerahasiaan medis.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <h4 class="font-bold text-white flex items-center space-x-1.5 mb-2">
+              <span class="text-amber-400">🏦</span>
+              <span>Perbankan, Fintech & Asuransi</span>
+            </h4>
+            <ul class="text-slate-300 text-[11px] space-y-1.5 list-disc list-inside">
+              <li><strong>Audit Trail & Bukti:</strong> Setiap modul wajib mencatat timestamp dan data xAPI untuk bukti pemeriksaan OJK/regulator.</li>
+              <li><strong>Pencegahan Fraud & AML:</strong> Skenario berfokus pada area abu-abu (*red flags* pencucian uang), bukan definisi buku teks.</li>
+              <li><strong>Fiduciary Duty:</strong> Menghilangkan benturan kepentingan dalam rekomendasi produk finansial ke nasabah.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <h4 class="font-bold text-white flex items-center space-x-1.5 mb-2">
+              <span class="text-orange-400">🏭</span>
+              <span>Manufaktur, Logistik & K3 (Safety)</span>
+            </h4>
+            <ul class="text-slate-300 text-[11px] space-y-1.5 list-disc list-inside">
+              <li><strong>Standar OSHA / SMK3:</strong> Penekanan visual pada LOTO (Lockout-Tagout) dan prosedur izin kerja aman.</li>
+              <li><strong>Near-Miss Culture:</strong> Menghargai pelaporan insiden nyaris celaka tanpa budaya menyalahkan (*just culture*).</li>
+              <li><strong>Aksesibilitas Lapangan:</strong> Modul dapat dibuka di tablet tahan banting atau audio instruksi di lingkungan bising.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-800/80 border border-slate-700 rounded-xl">
+            <h4 class="font-bold text-white flex items-center space-x-1.5 mb-2">
+              <span class="text-cyan-400">🏛️</span>
+              <span>Pemerintahan & Sektor Publik (ASN)</span>
+            </h4>
+            <ul class="text-slate-300 text-[11px] space-y-1.5 list-disc list-inside">
+              <li><strong>Kepatuhan Tata Kelola:</strong> Selaras dengan regulasi SPBE, kepatuhan audit BPK/Inspektorat, dan UU Pelayanan Publik.</li>
+              <li><strong>Hierarki & Protokol Formal:</strong> Tata naskah dinas, etika birokrasi, dan komunikasi formal berjenjang.</li>
+              <li><strong>Transparansi Anggaran:</strong> Mengajarkan akuntabilitas pengadaan barang dan jasa pemerintah (PBJ).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Tips Prompting & Anti-Patterns -->
+      <section id="section-best-practices" class="scroll-mt-20">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-rose-500/20 border border-rose-500/30 flex items-center justify-center text-rose-400 font-bold">7</div>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Tips Prompting Efektif & Anti-Patterns</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 bg-emerald-950/20 border border-emerald-800/40 rounded-xl text-xs">
+            <h4 class="font-bold text-emerald-400 flex items-center space-x-1.5 mb-2">
+              <span>💡</span>
+              <span>Formula Prompt Paling Direkomendasikan</span>
+            </h4>
+            <p class="text-slate-300 text-[11px] mb-2 leading-relaxed">
+              Untuk hasil deliverable yang 100% presisi dan siap pakai, sertakan 4 elemen ini dalam prompt lu:
+            </p>
+            <ol class="list-decimal list-inside text-slate-300 text-[11px] space-y-1">
+              <li><strong>Slash Command:</strong> Tentukan deliverable spesifik (misal: <code>/storyboard</code> atau <code>/qa</code>).</li>
+              <li><strong>Target Audiens & Latar Belakang:</strong> Usia, jabatan, pengalaman (misal: "teller bank baru lulus kuliah").</li>
+              <li><strong>Tantangan Kinerja / Problem Nyata:</strong> Apa yang sering salah di lapangan saat ini?</li>
+              <li><strong>Format / Media Target:</strong> Articulate Rise, Storyline 360, VILT, atau Video.</li>
+            </ol>
+          </div>
+
+          <div class="p-4 bg-rose-950/20 border border-rose-800/40 rounded-xl text-xs">
+            <h4 class="font-bold text-rose-400 flex items-center space-x-1.5 mb-2">
+              <span>⚠️</span>
+              <span>Anti-Patterns (Kesalahan yang Harus Dihindari)</span>
+            </h4>
+            <ul class="list-disc list-inside text-slate-400 text-[11px] space-y-1.5">
+              <li><strong class="text-slate-200">Prompt Terlalu Abstrak:</strong> Hanya mengetik <em>"buatkan training leadership"</em> tanpa batasan audiens atau tantangan spesifik.</li>
+              <li><strong class="text-slate-200">Melompati Gate 0:</strong> Membangun kursus e-learning panjang untuk masalah yang sebenarnya cukup diselesaikan dengan checklist 1 halaman.</li>
+              <li><strong class="text-slate-200">Kuis Pilihan Konyol:</strong> Membiarkan opsi salah yang terlalu jelas seperti "Marahi pelanggan dan lempar barang".</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quick Interactive Reference Modal / Helper Trigger -->
+        <div class="p-5 bg-gradient-to-r from-slate-900 to-indigo-950/50 border border-indigo-900/50 rounded-2xl flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h4 class="text-sm font-bold text-white">Siap Membangun Modul Pelatihan Berstandar Industri?</h4>
+            <p class="text-xs text-slate-300 mt-1">Cukup ketik slash command di Antigravity, AI siap bertindak sebagai strategic thinking partner lu.</p>
+          </div>
+          <div class="flex space-x-2">
+            <a href="#section-commands" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-lg transition shadow-lg shadow-indigo-600/30">
+              Lihat Katalog Command
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950/80 py-6 mt-12 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>🎓 <strong>Instructional Designer AI Agent Skill (v3.4.0 Master Suite)</strong> — MIT License.</p>
+      <p class="mt-1 text-[11px] text-slate-400">
+        Grounded in AECT (Dousay & Branch), Routledge (Cennamo & Kalk), Trina Rimmer (id-skills-for-claude), and Fastcat (instructional-design-critic).
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script for Interactive Filters & Copy Snippets -->
+  <script>
+    // Copy snippet functionality
+    function copySnippet(btn) {
+      const codeElement = btn.parentElement.querySelector('code');
+      if (codeElement) {
+        navigator.clipboard.writeText(codeElement.innerText).then(() => {
+          const originalText = btn.innerText;
+          btn.innerText = 'Copied!';
+          btn.style.backgroundColor = '#10b981';
+          setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.backgroundColor = '#334155';
+          }, 2000);
+        });
+      }
+    }
+
+    // Command Filter Tabs
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const commandCards = document.querySelectorAll('.command-card');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active', 'bg-indigo-600', 'text-white'));
+        tabButtons.forEach(b => b.classList.add('bg-slate-800', 'text-slate-300'));
+        btn.classList.add('active', 'bg-indigo-600', 'text-white');
+        btn.classList.remove('bg-slate-800', 'text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+        commandCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Search bar filter
+    const searchInput = document.getElementById('commandSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        commandCards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          if (text.includes(query)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Highlight active nav item on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
