@@ -53,10 +53,10 @@ The templates, scripts, and Markdown artifacts provided in this repository are *
    * **Authors**: Dr. Katherine Cennamo & Debby Kalk
    * **Publisher**: Routledge / Taylor & Francis
    * **Attribution**: The Essential Triangle of Instructional Design (Learners at center, Outcomes, Activities, Assessments, Evaluation wrap), the 5-phase knowledge-building spiral (Define, Design, Demonstrate, Develop, Deliver), the collaborative ASC cycle, and Zahorik's 4 sequencing models are adapted from *Real World Instructional Design: An Iterative Approach to Designing Learning Experiences* (Cennamo & Kalk, 2019).
-9. **Performance Consulting, Craft Nuances, & Authoring Constraints**:
+9. **Performance Consulting, Craft Nuances, Character Design & QA**:
    * **Author**: Trina Rimmer
    * **Repository**: [trinarimmer-stack/id-skills-for-claude](https://github.com/trinarimmer-stack/id-skills-for-claude)
-   * **Attribution**: The "When NOT to Design" diagnostic protocol, Robert Mager's performance analysis questions, the AI Failure Modes Guard (plausible distractors, anti-cosmetic interactivity, UI control purpose), and authoring tool capability constraints (Storyline 360 vs. Rise 360) are adapted with gratitude from Trina Rimmer's open-source instructional design knowledge base.
+   * **Attribution**: The "When NOT to Design" diagnostic protocol, Robert Mager's performance analysis questions, the AI Failure Modes Guard (plausible distractors, anti-cosmetic interactivity, UI control purpose), authoring tool capability constraints (Storyline 360 vs. Rise 360), Character Design for E-Learning with the Reference Image Anchor technique, and the 4-tier E-Learning QA verification framework are adapted with gratitude from Trina Rimmer's open-source instructional design knowledge base.
 
 10. **Multi-Lens Instructional Design Critique**:
     * **Author**: Fastcat

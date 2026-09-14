@@ -5,6 +5,25 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ---
 
+## [3.4.0] - 2026-09-14
+### Added
+- **Character Design for E-Learning (`/character`)**: Full cast spec sheet (`character-spec-sheet-template.md`) with 5 core emotional poses and AI image prompt generator using the Reference Image Anchor technique (Trina Rimmer, 2024).
+- **4-Tier E-Learning QA & Bug Tracker (`/qa`)**: Pre-delivery QA checklist (`elearning-qa-bug-tracker.md`) spanning Functional, Instructional, Editorial, and Accessibility (WCAG 2.2 AA) with severity-ranked bug tracker table.
+- **Industry-Specific Considerations (`industry-specific-considerations.md`)**: High-stakes design constraints, regulatory compliance, and cultural nuances across Healthcare/Clinical, Finance/Banking, Manufacturing/K3 OSHA, Government/Public Sector, and Higher Education.
+- **Interaction Quality 6-Dimension Rubric & UI Control Design**: Advanced heuristics added to `performance-consulting-and-craft.md` for evaluating consequence depth, cognitive load, and eliminating condescending button instructions.
+- **Multi-Skill Project Recipes Playbook (`COMBINATIONS.md`)**: 6 end-to-end recipes connecting research, blueprinting, character spec, storyboarding, QA, and adversarial critique.
+
+---
+
+## [3.3.0] - 2026-09-14
+### Added
+- **Gate 0: Performance Consulting ("When NOT to Design")**: Mager performance analysis to filter out non-training problems before instructional effort is spent.
+- **AI Failure Modes Guard**: Anti-shallow heuristics preventing throwaway quiz distractors, cosmetic clicks, condescending UI text, and moralizing lectures.
+- **Multi-Lens Adversarial Critique (`/critique`)**: Fastcat-inspired evaluation engine assessing Rigor, Cognitive Demand, Access, Assessment Alignment, and Feedback across Supportive, Balanced, and Adversarial stances.
+- **Seminal Literature Integration**: *Real World Instructional Design* (Cennamo & Kalk, 2019) with the Essential Triangle, 5-phase spiral, and Zahorik sequencing.
+
+---
+
 ## [3.2.0] - 2026-09-03
 ### Added
 - **Weighted Multi-Dimensional Scoring Engine**: Replaced rigid categorical framework matching with a 5-dimension weighted assessment (Stakes, Complexity, Timeline, Goal Type, Governance).

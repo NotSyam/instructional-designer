@@ -91,3 +91,49 @@ When designing e-learning architectures, align the design specifications to the 
 | **Articulate Rise 360** | Rapid development, mobile-first responsive delivery, information-dense reference courses, light knowledge checks. | Fast production, modular blocks, pristine typography across mobile/tablet/desktop, zero programming. | Limited custom branching logic, cannot build complex multi-state simulations or custom mathematical variables. |
 | **Articulate Storyline 360** | High-fidelity branching scenarios, software simulations, gamified mechanics, custom variables & triggers, complex states. | Pixel-perfect control, custom layers, conditional branching, xAPI trigger statements, custom state tracking. | Slower production time, fixed aspect-ratio scaling (not fluid responsive), requires detailed storyboards. |
 | **Custom HTML5 / SCORM Web App** | Tailored web apps, interactive calculators, bespoke sound synthesis (Web Audio API), client-side encryption. | Complete architectural freedom, modern CSS (Tailwind), lightweight asset footprint. | Requires web developer / programming expertise, higher initial build cost. |
+---
+
+## 4. Assessing Interaction Quality (The 6-Dimension Rubric)
+
+When reviewing or generating interactive scenarios, evaluate the experience across these 6 quality dimensions (Trina Rimmer, 2024):
+
+| Dimension | Quality Standard (Strong) | Failure Pattern (Weak) |
+|---|---|---|
+| **1. Scenario Realism** | Scenario reflects messy workplace ambiguity with realistic stakes and imperfect choices. | Sterile corporate textbook vignette where the "right" answer is glaringly obvious. |
+| **2. Choice Architecture** | Every option is plausible and defensible; distractors reflect genuine misinterpretations or cognitive traps. | One obviously saintly option vs. two comically irresponsible or malicious options. |
+| **3. Consequence Design** | Consequence plays out naturally in the narrative (e.g. client cancels contract, teammate gets frustrated). | Author lectures the learner with a preachy explanation: *"You should never do that!"* |
+| **4. Cognitive Load Calibration** | Focuses mental effort entirely on the decision itself; UI navigation is transparent and friction-free. | Complex puzzle mechanics or confusing drag zones that consume working memory before the task is started. |
+| **5. Objective Alignment** | Decision mirrors the exact behavior required on the job (e.g. de-escalating an angry customer). | Testing academic definitions of de-escalation models while calling it a "simulation". |
+| **6. Feedback Depth** | Feedback explains *why* the consequence occurred and reinforces the underlying causal mechanism. | Surface-level "Correct! Well done!" or "Incorrect, try again!" with zero explanatory power. |
+
+---
+
+## 5. UI Control Design for E-Learning (Anti-Additive Redundancy)
+
+Controls in an e-learning interface must adhere to the fundamental UX law: **Controls Should Communicate Their Own Purpose** (Trina Rimmer, 2024).
+
+### 5.1 The Additive Redundancy Failure Mode
+* **The Error**: Adding meta-instructions explaining how to interact with obvious controls:
+  * ❌ *"Click the toggle switch on the right to change modes."*
+  * ❌ *"Drag the slider handle to adjust the budget value."*
+* **The Rule**: If a control requires a sentence explaining how to manipulate it, the control design has failed.
+
+### 5.2 Control Specifications
+1. **Toggles**: Must visually show state (Active/Inactive) using high-contrast color and physical displacement. The label describes the state, not the action.
+2. **Sliders**: Provide immediate numeric feedback as the handle moves. Use range sliders only for continuous variables, not discrete categories.
+3. **Buttons**: Use active verb labels indicating the result of clicking (`[Submit Claim]`, `[Review Telemetry]`), never generic `[Click Here]` or `[Next]`.
+4. **Drag Zones**: Target zones must highlight when an item enters the drop area (*hover state*), snap on release, and provide audible/visual confirmation.
+
+---
+
+## 6. Culturally Situated Scenario Writing
+
+Scenarios must reflect **authentic cultural texture**, not superficial cosmetic diversity (Patricia Young, 2008; Trina Rimmer, 2024):
+
+1. **Hierarchy & Power Distance**: In high power-distance cultures (e.g., parts of East Asia, Southeast Asia, Middle East), junior team members rarely challenge senior executives openly in a meeting. Scenarios must reflect indirect communication, private post-meeting alignment (*nemawashi*), and nuanced status dynamics.
+2. **Communication Context (High vs. Low Context)**:
+   * *Low-Context (e.g., US, Germany)*: Direct, literal, explicit verbal messages.
+   * *High-Context (e.g., Japan, Indonesia, Arab world)*: Meaning is embedded in relationship context, non-verbal cues, and what is *unsaid*.
+3. **Plausible Professional Attire & Naming**:
+   * Avoid stereotypical names from 1980s textbooks.
+   * Depict realistic local professional settings (e.g., batik shirts in formal Indonesian corporate settings, scrub colors aligned with hospital seniority).

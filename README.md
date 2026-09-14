@@ -1,8 +1,8 @@
-# 🎓 Instructional Designer AI Agent Skill (v3.3.0 Enterprise Suite)
+# 🎓 Instructional Designer AI Agent Skill (v3.4.0 Master Suite)
 
 [![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills_Standard-v2.0-blue.svg)](https://github.com/GarethManning/education-agent-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.3.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.4.0-green.svg)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/Tests-Passing_6/6-brightgreen.svg)](tests/test_scripts.py)
 [![Compatible](https://img.shields.io/badge/Harnesses-Claude_|_Codex_|_Hermes_|_Antigravity-purple.svg)](SKILL.md)
 
@@ -24,6 +24,8 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 |---|---|---|
 | `/storyboard` | **E-Learning & Video Storyboard** | Screen-by-screen script with On-Screen Text (OST), Voiceover Script (VO), Visual UI Layout, Branching/Interaction Logic, and Developer Notes. Ready for Articulate/Rise/Video production. |
 | `/treatment` | **Instructional Strategy Treatment** | 2-column creative prototype linking content chunks with treatment ideas (*what learners see, hear, and do*) before full storyboarding (Cennamo & Kalk, 2019). |
+| `/character` | **Character Spec Sheet & AI Prompts** | Scenario cast specification with 5 emotional poses, visual style guide, and AI image prompts using the Reference Image Anchor technique (Trina Rimmer, 2024). |
+| `/qa` | **E-Learning QA & Bug Tracker** | 4-tier pre-delivery verification (Functional, Instructional, Editorial, Accessibility WCAG 2.2 AA) with severity classification and bug tracking log. |
 | `/idd` | **Master Instructional Design Document** | Architectural blueprint featuring M-IDA framework scoring, learner personas, curriculum matrix, Kirkpatrick L1–L4 evaluation, contextual WBS, and RACI governance. |
 | `/course-plan` | **Curriculum Blueprint & Syllabus** | Module-by-module curriculum matrix mapping Bloom's objectives, seat time, Dale's Cone activities, and assessments. |
 | `/facilitator-guide` | **Complete Facilitator / Trainer Guide** | 3-column timeline script with verbatim facilitator dialogue, minute-by-minute pacing, and transition cues (**Mode B / Ready Tomorrow Morning**). |
@@ -81,21 +83,24 @@ Run an evidence-backed review using 5 specialized lenses:
 │   ├── design-critique-and-audit.md         # Multi-lens critique & adversarial audit engine
 │   ├── document-production.md               # Toolchain routing & 3-tier fallback protocols
 │   ├── idd-and-isd-methodology.md          # M-IDA architecture, 15 canonical models, Cennamo & Kalk spiral
+│   ├── industry-specific-considerations.md  # Healthcare, Finance, Manufacturing, Gov, Higher Ed
 │   ├── isd-quality-and-pm-standards.md      # 48 intake questions & 37-point audit checklist
 │   ├── knowledge-base.md                    # 75+ learning theories & dynamic selection matrix
 │   ├── modern-edtech-and-microlearning.md   # H5P matrix, xAPI schemas, spaced retrieval
 │   ├── performance-consulting-and-craft.md  # "When NOT to Design", AI failure modes, Storyline/Rise
 │   └── system-prompt-plain.txt              # Plain-text mirror for non-file LLM harnesses
 ├── resources/templates/
-│   ├── storyboard-template.md               # Screen-by-screen e-learning & media storyboard
-│   ├── treatment-template.md                # 2-column chunk-to-media creative treatment
+│   ├── branching-scenario-template.md       # Interactive decision-tree simulation script
+│   ├── character-spec-sheet-template.md     # Cast spec sheet & AI prompt generator
 │   ├── course-blueprint-template.md         # Module-by-module curriculum matrix
 │   ├── course-quality-self-check.md         # Gate 0 + Hard/Advisory audit & Definition of Done
+│   ├── elearning-qa-bug-tracker.md          # 4-tier QA verification & bug tracking log
 │   ├── facilitator-guide-template.md        # 3-column timeline facilitator script
 │   ├── instructional-design-document-template.md  # Master 8-section enterprise IDD
 │   ├── isd-project-timeline-and-pm-plan.md  # Contextual WBS, RACI, & 35-point checklist
-│   ├── branching-scenario-template.md       # Interactive decision-tree simulation script
-│   └── rubric-matrix-template.md            # 4-tier analytic evaluation rubric
+│   ├── rubric-matrix-template.md            # 4-tier analytic evaluation rubric
+│   ├── storyboard-template.md               # Screen-by-screen e-learning & media storyboard
+│   └── treatment-template.md                # 2-column chunk-to-media creative treatment
 ├── scripts/
 │   ├── outline_to_slides.py                 # Marp slide deck generator
 │   └── quiz_to_gift.py                      # Canvas/Moodle GIFT & XML quiz exporter
@@ -104,6 +109,7 @@ Run an evidence-backed review using 5 specialized lenses:
 │   └── validate_skill.py                    # Skill structure & manifest validator
 ├── ATTRIBUTION.md                           # Comprehensive attribution & fair-use notices
 ├── CHANGELOG.md                             # Version history & release notes
+├── COMBINATIONS.md                          # Multi-skill project recipes & workflows
 ├── LICENSE                                  # MIT License
 ├── package.json                             # SkillHub metadata
 ├── README.md                                # Project documentation

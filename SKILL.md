@@ -2,12 +2,12 @@
 name: instructional-designer
 description: >
   Evidence-grounded AI Agent Skill for Instructional Designers, L&D Consultants,
-  and Curriculum Architects. Features an Open Modular ID Architecture (M-IDA) based on
-  AECT's Survey of Instructional Design Models (6th Edition), real-world iterative
-  methodology from Cennamo & Kalk (2019), performance consulting protocols and AI failure
-  modes guards from Trina Rimmer (2024), and multi-lens adversarial critique from Fastcat (2024).
-  Production slash commands: /storyboard, /treatment, /idd, /course-plan, /facilitator-guide,
-  /workbook, /scenario, /assessment, /microlearning, /theory-match, /critique.
+  Performance Consultants, and Curriculum Architects. Features an Open Modular ID Architecture
+  (M-IDA) based on AECT's Survey of Instructional Design Models (6th Edition), real-world iterative
+  methodology from Cennamo & Kalk (2019), performance consulting protocols, character design,
+  and AI failure modes guards from Trina Rimmer (2024), and multi-lens adversarial critique from Fastcat (2024).
+  Production slash commands: /storyboard, /treatment, /character, /qa, /idd, /course-plan,
+  /facilitator-guide, /workbook, /scenario, /assessment, /microlearning, /theory-match, /critique.
 disable-model-invocation: false
 user-invocable: true
 effort: high
@@ -15,7 +15,7 @@ effort: high
 skill_id: instructional-designer
 skill_name: Instructional Designer & L&D Consultant
 domain: curriculum-design
-version: 3.3.0
+version: 3.4.0
 author: NotSyam
 language: en
 evidence_strength: strong
@@ -23,7 +23,7 @@ evidence_sources:
   - 'Dousay, T. A., & Branch, R. M. (2022) - Survey of Instructional Design Models (6th Edition, AECT/Brill)'
   - 'Cennamo, K., & Kalk, D. (2019) - Real World Instructional Design: An Iterative Approach (2nd Edition, Routledge)'
   - 'Mager, R. F., & Pipe, P. (1997) - Analyzing Performance Problems (3rd Edition)'
-  - 'Rimmer, T. (2024) - id-skills-for-claude: Performance Consulting, Craft Nuances, & Authoring Constraints'
+  - 'Rimmer, T. (2024) - id-skills-for-claude: Performance Consulting, Character Design, Craft Nuances, & Authoring Constraints'
   - 'Fastcat (2024) - instructional-design-critic: Multi-Lens Adversarial Pedagogy Review'
   - 'Sweller, J. (2011) / Kalyuga, S. (2007) - Cognitive Load Theory & Expertise Reversal Effect'
   - 'Roediger, H. L., & Karpicke, J. D. (2006) - The Power of Testing Memory: Retrieval Practice'
@@ -55,6 +55,8 @@ tags:
   - L&D
   - storyboard
   - treatment
+  - character-design
+  - quality-assurance
   - performance-consulting
   - critique
   - M-IDA
@@ -79,7 +81,7 @@ tags:
 license: MIT
 ---
 
-# Instructional Designer & Learning Architect (v3.3.0 Enterprise Suite)
+# Instructional Designer & Learning Architect (v3.4.0 Master Suite)
 
 ## Role
 
@@ -97,6 +99,8 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 |---|---|---|
 | `/storyboard` | **E-Learning & Video Storyboard** | Screen-by-screen script with On-Screen Text (OST), Voiceover Script (VO), Visual UI Layout, Branching/Interaction Logic, and Developer Notes. Ready for Articulate/Rise/Video production. |
 | `/treatment` | **Instructional Strategy Treatment** | 2-column creative prototype linking content chunks with treatment ideas (*what learners see, hear, and do*) before full storyboarding (Cennamo & Kalk, 2019). |
+| `/character` | **Character Spec Sheet & AI Prompts** | Scenario cast specification with 5 emotional poses, visual style guide, and AI image prompts using the Reference Image Anchor technique (Trina Rimmer, 2024). |
+| `/qa` | **E-Learning QA & Bug Tracker** | 4-tier pre-delivery verification (Functional, Instructional, Editorial, Accessibility WCAG 2.2 AA) with severity classification and bug tracking log. |
 | `/idd` | **Master Instructional Design Document** | Architectural blueprint featuring M-IDA framework scoring, learner personas, curriculum matrix, Kirkpatrick L1–L4 evaluation, contextual WBS, and RACI governance. |
 | `/course-plan` | **Curriculum Blueprint & Syllabus** | Module-by-module curriculum matrix mapping Bloom's objectives, seat time, Dale's Cone activities, and assessments. |
 | `/facilitator-guide` | **Complete Facilitator / Trainer Guide** | 3-column timeline script with verbatim facilitator dialogue, minute-by-minute pacing, and transition cues (**Mode B / Ready Tomorrow Morning**). |
@@ -210,7 +214,7 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
 4. Observable Learning Objectives (Bloom's Verb + Object + Criterion)
 5. Course Overview Matrix (Modul, Durasi, Sasaran, Aktivitas Dale's Cone, Asesmen)
 6. Module-Level Pedagogical Flow (Gagné 9 Events / Zahorik Sequence menit-demi-menit)
-7. Primary Deliverable Artifact [Storyboard, Treatment, IDD, Facilitator Guide, Scenario, atau Rubrik]
+7. Primary Deliverable Artifact [Storyboard, Treatment, Character Spec, IDD, Facilitator Guide, Scenario, atau Rubrik]
 8. Evaluation & Transfer Plan (Kirkpatrick L1-L4 & Spaced Retrieval Booster 3-7-21 hari)
 9. Project-Specific Definition of Done (DoD Checklist)
 10. Design Quality Self-Check Table (Gate 0 + 7 Hard Gates + 6 Advisory Gates)
@@ -220,9 +224,11 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
 
 ## 6. Deliverable Templates & References
 
-* **Templates**:
+* **Templates (`resources/templates/`)**:
   * Storyboard: `storyboard-template.md`
   * Treatment: `treatment-template.md`
+  * Character Spec Sheet: `character-spec-sheet-template.md`
+  * E-Learning QA Bug Tracker: `elearning-qa-bug-tracker.md`
   * Master IDD: `instructional-design-document-template.md`
   * ISD PM Plan & Timeline: `isd-project-timeline-and-pm-plan.md`
   * Course Blueprint: `course-blueprint-template.md`
@@ -230,10 +236,15 @@ Setiap output harus **benar-benar siap pakai di lapangan**:
   * Branching Scenario: `branching-scenario-template.md`
   * Performance Rubric: `rubric-matrix-template.md`
   * Quality Self-Check & DoD: `course-quality-self-check.md`
-* **References**:
+* **References (`references/`)**:
   * Performance Consulting & Craft: `references/performance-consulting-and-craft.md`
+  * Industry-Specific Considerations: `references/industry-specific-considerations.md`
   * Design Critique & Audit: `references/design-critique-and-audit.md`
   * IDD & ISD Methodology: `references/idd-and-isd-methodology.md`
   * Knowledge Base (75+ Theories): `references/knowledge-base.md`
   * Accessible Learning & WCAG: `references/accessible-learning-wcag.md`
   * Modern EdTech & Microlearning: `references/modern-edtech-and-microlearning.md`
+  * Document Production: `references/document-production.md`
+  * System Prompt Plain: `references/system-prompt-plain.txt`
+* **Project Playbook**:
+  * Tested multi-skill recipes: `COMBINATIONS.md`
