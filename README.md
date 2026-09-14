@@ -1,16 +1,18 @@
-# 🎓 Instructional Designer AI Agent Skill (v3.2.0)
+# 🎓 Instructional Designer AI Agent Skill (v3.3.0 Enterprise Suite)
 
 [![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills_Standard-v2.0-blue.svg)](https://github.com/GarethManning/education-agent-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-3.2.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-3.3.0-green.svg)](CHANGELOG.md)
 [![Tests](https://img.shields.io/badge/Tests-Passing_6/6-brightgreen.svg)](tests/test_scripts.py)
 [![Compatible](https://img.shields.io/badge/Harnesses-Claude_|_Codex_|_Hermes_|_Antigravity-purple.svg)](SKILL.md)
 
-An evidence-grounded **AI Agent Skill for Instructional Designers, L&D Consultants, and Curriculum Architects**.
+An evidence-grounded **AI Agent Skill for Instructional Designers, L&D Consultants, Performance Consultants, and Curriculum Architects**.
 
-Converts ambiguous training requests into **turnkey, measurable, and cognitively sound learning deliverables**—grounded in the dual foundations of:
-1. **AECT Canonical Taxonomy**: *Survey of Instructional Design Models (6th Edition)* by Tonia A. Dousay & Robert Maribe Branch (Brill / AECT, 2022).
-2. **Real-World Collaborative Spiral**: *Real World Instructional Design: An Iterative Approach to Designing Learning Experiences (2nd Edition)* by Katherine Cennamo & Debby Kalk (Routledge, 2019).
+Converts ambiguous training requests into **turnkey, measurable, and cognitively sound learning deliverables**—grounded in the unified synthesis of four seminal pillars:
+1. **AECT Canonical Taxonomy & M-IDA**: *Survey of Instructional Design Models (6th Edition)* by Tonia A. Dousay & Robert Maribe Branch (Brill / AECT, 2022).
+2. **Real-World Collaborative Spiral**: *Real World Instructional Design: An Iterative Approach (2nd Edition)* by Katherine Cennamo & Debby Kalk (Routledge, 2019).
+3. **Performance Consulting & Craft Heuristics**: *The "When NOT to Design" Protocol & AI Failure Modes Guard* by Trina Rimmer (*id-skills-for-claude*, 2024).
+4. **Multi-Lens Adversarial Critique**: *Evidence-Backed Pedagogy Audit & Smallest Testable Experiment* by Fastcat (*instructional-design-critic*, 2024).
 
 ---
 
@@ -30,49 +32,39 @@ Practitioners can trigger specific, turnkey deliverables instantly using these p
 | `/assessment` | **Assessment Bank & Evaluation Rubrics** | Criterion-referenced quiz questions (GIFT/Moodle XML ready) or 4-tier analytic evaluation rubrics. |
 | `/microlearning` | **Microlearning Bite / Job Aid (3–5 Min)** | High-impact 4-part micro-nugget (Hook, Concept, Application, Retention Check) with spaced booster schedule. |
 | `/theory-match` | **Dynamic Theory & Model Diagnostics** | Automated analysis evaluating project needs against M-IDA layers and 75+ learning theories from the knowledge base. |
+| `/critique` | **Multi-Lens Design Critique & Audit** | Evidence-backed review testing Rigor, Cognitive Demand, Access, Assessment Alignment, and Feedback with Supportive, Balanced, or Adversarial stance. |
 
 ---
 
-## 🌟 Key Capabilities & Industry-Ready Standards
+## 🌟 Key Architectural Pillars & Quality Standards
 
-### 1. Open Modular ID Architecture (M-IDA)
-Instead of forcing learning projects into rigid, pre-canned hybrid packages, this skill applies the **Open Modular ID Architecture (M-IDA)** grounded in Dousay & Branch (2022) and Cennamo & Kalk (2019).
+### 1. Gate 0: Performance Consulting ("When NOT to Design")
+* **The Mager Life-or-Death Test**: *"Could the performers execute this task correctly if their lives or jobs depended on it?"*
+* If **YES**: The problem is not a knowledge gap—it is a broken tool, flawed process, or misaligned incentive. Do not build a bloated course. Recommend a **Job Aid, Checklist, Workflow Fix, or Management KPI Redesign**.
+* If **NO**: Proceed to design systematic instruction.
 
-Projects are assembled dynamically across **4 Functional Layers**:
+### 2. AI Failure Modes Guard (Anti-Shallow Quality Control)
+* **Plausible Distractors**: Quizzes must never include silly or obvious throwaway choices. Every distractor must reflect authentic workplace misconceptions or common near-miss errors.
+* **Meaningful Interactivity**: Zero cosmetic clicks. Interactions must require cognitive decision-making, diagnosis, or prediction.
+* **Zero UI Redundancy**: Eliminate condescending button instructions like *"Click the Next button below to continue"*. Controls must communicate their purpose intuitively.
+* **Empathy in Sensitive Topics**: Strip preachy, moralizing lectures from compliance and ethics training. Focus on nuanced gray areas and realistic natural consequences.
+
+### 3. Open Modular ID Architecture (M-IDA)
+Instead of forcing learning projects into rigid, pre-canned hybrid packages, this skill applies the **Open Modular ID Architecture (M-IDA)** grounded in Dousay & Branch (2022) and Cennamo & Kalk (2019):
 * **Layer 1: Macro Governance & Lifecycle**: *ADDIE, Cennamo-Kalk Spiral, Agile ID (Scrum), Gentry IPDM, Seels & Glasgow ISD Model 2, Branson IPISD*.
 * **Layer 2: Task & Knowledge Architecture**: *Dick, Carey & Carey, Merrill Pebble in the Pond, van Merriënboer 4C/ID, Cathy Moore Action Mapping, Gerlach & Ely, Kemp Model*.
 * **Layer 3: Pedagogical & Contextual Strategy**: *Gagné 9 Events, Understanding by Design (UbD), Patricia Young Culture Based Model (CBM), CAST Universal Design for Learning (UDL)*.
 * **Layer 4: Constraint Scaling & Evolution**: *Tessmer & Wedman Layers-of-Necessity (Layer 1 MVP -> Layer n)*.
 
-### 2. The Essential Triangle of ID & Collaborative Spiral (Cennamo & Kalk, 2019)
-* **Learner at the Center**: Outcomes, Activities, and Assessments form an equilateral triangle with the learner at the core, wrapped by continuous Evaluation.
-* **Non-Linear Entry Principle**: Start at any point (Outcomes-first, Assessment-first with field SMEs, or Activity/Content-first with existing assets), ensuring perfect alignment.
-* **Zahorik's 4 Instructional Sequences**: Application Model (hierarchical-convergent), Discovery Model (problem-convergent), Extension Model (hierarchical-divergent), and Invention Model (problem-divergent).
-* **Progressive Deliverable Refinement**: Design Document -> Content Document -> Treatment -> Storyboard -> Working Prototype -> Revision Table.
-
-### 3. Weighted 5-Dimension Scoring Engine & 20-Point Rule
-* **D1 — Stakes & Failure Cost**: Minor error consequence (1) -> Operational impact (3) -> Zero-tolerance / Life-safety / Legal audit (5).
-* **D2 — Skill Complexity**: Declarative recall (1) -> Procedural multi-step (3) -> Complex cognitive & heuristics (5).
-* **D3 — Timeline & Delivery Pressure**: Loose horizon >12 wks (1) -> Standard 6–12 wks (3) -> Rapid sprint <6 wks (5).
-* **D4 — Primary Outcome Goal**: Conceptual transfer (1) -> Specific task execution (3) -> Measurable on-the-job behavior change (5).
-* **D5 — Governance & Culture**: Lean startup (1) -> Mid enterprise (3) -> Heavy audit & regulatory sign-off (5).
-* **Decision Logic**: Score diff > 20 pts -> Single framework (#1 ranked); Score diff <= 20 pts -> Dynamic M-IDA modular composition (**Confidence: Medium**). User override is always supported.
-
-### 4. Dynamic Theory Selection Engine (Knowledge Base)
-Automatically diagnoses and pairs the instructional challenge with the optimal theoretical mechanism from `references/knowledge-base.md`:
-* **Complex Cognitive Tasks**: Sweller Cognitive Load Theory & Expertise Reversal Effect.
-* **Procedural Mastery**: Merrill's First Principles & Behaviorist Task Chaining.
-* **Conceptual Transfer**: Wiggins & McTighe UbD & Ausubel Subsumption.
-* **Low Motivation & Drive**: Keller ARCS-E & Deci/Ryan Self-Determination Theory.
-* **Long-Term Retention**: Roediger & Karpicke Retrieval Practice & Spaced Testing (3, 7, 21 days).
-* **Social & Cohort Dynamics**: Vygotsky ZPD & Wenger Communities of Practice (CoP).
-* **Cultural Responsiveness**: Patricia Young Culture Based Model (CBM).
-
-### 5. Industry-Ready Standards (No Hollow Artifacts)
-* **Zero Placeholder Jargon**: Complete minute-by-minute facilitator scripts, explicit exercises, and verbatim talking points—no vague *"use Gagné here"* labels.
-* **Contextual Scale & Timeline**: Timelines scale to real project duration (no forced 16-week WBS for a 90-minute workshop). Unspecified parameters are marked explicitly as `[ASUMSI: ...]`.
-* **Project-Specific Definition of Done (DoD)**: Concrete sign-off criteria specifying when deliverables are ready for production.
-* **The "Ready-to-Deploy Tomorrow Morning" Test**: If handed to a facilitator or developer tomorrow morning, they can execute immediately with zero missing information.
+### 4. Multi-Lens Adversarial Critique Engine (Fastcat)
+Run an evidence-backed review using 5 specialized lenses:
+* **Rigor & Cognitive Demand**: Cognitive Load Theory, Expertise Reversal Effect.
+* **Alignment & Construct Validity**: Does assessment measure authentic capability or proxy test skills?
+* **Access & Inclusivity**: UDL 3 Pillars, WCAG 2.2 AA.
+* **Feedback Depth**: Natural consequence layers vs. shallow "Right/Wrong" announcements.
+* **Transfer**: Far transfer and on-the-job bridging.
+* **Review Stances**: *Supportive* (ideation), *Balanced* (design review), *Adversarial* (stress-testing before launch).
+* **The Smallest Testable Experiment**: Identifies the single micro-intervention that yields the highest instructional payoff without rewriting everything.
 
 ---
 
@@ -86,16 +78,19 @@ Automatically diagnoses and pairs the instructional challenge with the optimal t
 │   └── sample_quiz.md                       # Fixture for GIFT/XML quiz generation
 ├── references/
 │   ├── accessible-learning-wcag.md          # WCAG 2.2 AA & UDL compliance checklist
+│   ├── design-critique-and-audit.md         # Multi-lens critique & adversarial audit engine
 │   ├── document-production.md               # Toolchain routing & 3-tier fallback protocols
 │   ├── idd-and-isd-methodology.md          # M-IDA architecture, 15 canonical models, Cennamo & Kalk spiral
 │   ├── isd-quality-and-pm-standards.md      # 48 intake questions & 37-point audit checklist
 │   ├── knowledge-base.md                    # 75+ learning theories & dynamic selection matrix
-│   └── modern-edtech-and-microlearning.md   # H5P matrix, xAPI schemas, spaced retrieval
+│   ├── modern-edtech-and-microlearning.md   # H5P matrix, xAPI schemas, spaced retrieval
+│   ├── performance-consulting-and-craft.md  # "When NOT to Design", AI failure modes, Storyline/Rise
+│   └── system-prompt-plain.txt              # Plain-text mirror for non-file LLM harnesses
 ├── resources/templates/
 │   ├── storyboard-template.md               # Screen-by-screen e-learning & media storyboard
 │   ├── treatment-template.md                # 2-column chunk-to-media creative treatment
 │   ├── course-blueprint-template.md         # Module-by-module curriculum matrix
-│   ├── course-quality-self-check.md         # Hard/Advisory gate audit & Definition of Done
+│   ├── course-quality-self-check.md         # Gate 0 + Hard/Advisory audit & Definition of Done
 │   ├── facilitator-guide-template.md        # 3-column timeline facilitator script
 │   ├── instructional-design-document-template.md  # Master 8-section enterprise IDD
 │   ├── isd-project-timeline-and-pm-plan.md  # Contextual WBS, RACI, & 35-point checklist
@@ -107,7 +102,7 @@ Automatically diagnoses and pairs the instructional challenge with the optimal t
 ├── tests/
 │   ├── test_scripts.py                      # Unit test suite for automation scripts
 │   └── validate_skill.py                    # Skill structure & manifest validator
-├── ATTRIBUTION.md                           # Third-party framework attribution & disclaimers
+├── ATTRIBUTION.md                           # Comprehensive attribution & fair-use notices
 ├── CHANGELOG.md                             # Version history & release notes
 ├── LICENSE                                  # MIT License
 ├── package.json                             # SkillHub metadata
@@ -122,7 +117,7 @@ Automatically diagnoses and pairs the instructional challenge with the optimal t
 
 ### 1. Google Antigravity (AGY)
 ```bash
-git clone https://github.com/NotSyam/instructional-designer.git ~/.gemini/antigravity/skills/instructional-designer
+git clone https://github.com/NotSyam/instructional-designer.git ~/.gemini/config/skills/instructional-designer
 ```
 
 ### 2. Hermes Agent
@@ -153,4 +148,4 @@ python tests/validate_skill.py
 ## 📜 Attribution & License
 
 * **License**: [MIT License](LICENSE)
-* **Attribution**: Grounded in seminal works from AECT, Tonia A. Dousay & Robert Maribe Branch (*Survey of Instructional Design Models*, 6th Edition, 2022), Katherine Cennamo & Debby Kalk (*Real World Instructional Design*, 2019), Cathy Moore (*Action Mapping*), Walter Dick & Lou Carey, Michael Allen (*SAM*), Jeroen van Merriënboer (*4C/ID*), Grant Wiggins & Jay McTighe (*UbD*), and Patricia Young (*CBM*). See [ATTRIBUTION.md](ATTRIBUTION.md) for detailed fair-use notices.
+* **Attribution**: Grounded in seminal works from AECT, Tonia A. Dousay & Robert Maribe Branch (*Survey of Instructional Design Models*, 6th Edition, 2022), Katherine Cennamo & Debby Kalk (*Real World Instructional Design*, 2nd Edition, 2019), Trina Rimmer (*id-skills-for-claude*, 2024), Fastcat (*instructional-design-critic*, 2024), Robert Mager & Peter Pipe (1997), Cathy Moore (*Action Mapping*), Walter Dick & Lou Carey, Michael Allen (*SAM*), Jeroen van Merriënboer (*4C/ID*), Grant Wiggins & Jay McTighe (*UbD*), and Patricia Young (*CBM*). See [ATTRIBUTION.md](ATTRIBUTION.md) for full fair-use disclosures.
